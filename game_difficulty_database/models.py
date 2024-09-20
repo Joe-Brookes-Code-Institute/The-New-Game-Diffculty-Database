@@ -12,7 +12,7 @@ class Game(models.Model):
     genre = models.CharField(max_length=100)
     platform = models.CharField(max_length=100)
     release_date = models.DateField()
-    multiplayer = models.BooleanField(default=False)
+    NGplus = models.BooleanField(default=False)
     description = models.TextField()
 
     def __str__(self):
