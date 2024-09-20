@@ -1,1 +1,1 @@
-web: gunicorn Game_Datebase.wsgi --log-file -
+web: gunicorn Game_Datebase.wsgi
