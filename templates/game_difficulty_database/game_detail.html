@@ -1,12 +1,40 @@
+{% extends 'base.html' %}
+
 {% block content %}
 <h1>{{ game.name }}</h1>
-<p><strong>Difficulty:</strong> {{ game.get_difficulty_display }}</p>
-<p><strong>Release Date:</strong> {{ game.release_date }}</p>
-<p><strong>Description:</strong> {{ game.description }}</p>
-<p><strong>Enemy Health:</strong> {{ game.enemy_health }}%</p>
-<p><strong>Player Health:</strong> {{ game.player_health }}%</p>
-<p><strong>Resources:</strong> {{ game.resources }}%</p>
-<p><strong>Unlockable:</strong> {% if game.unlockable %}Yes{% else %}No{% endif %}</p>
-<p><strong>New Game Plus:</strong> {% if game.new_game_plus %}Yes{% else %}No{% endif %}</p>
+
+<form method="get">
+    <label for="difficulty">Select Difficulty:</label>
+    <select name="difficulty" id="difficulty" onchange="this.form.submit()">
+        {% for value, display in difficulties %}
+            <option value="{{ value }}" {% if value == selected_difficulty %}selected{% endif %}>
+                {{ display }}
+            </option>
+        {% endfor %}
+    </select>
+</form>
+
+<h2>Difficulty: {{ selected_difficulty|title }}</h2>
+
+{% if difficulty_data %}
+    <h3>Difficulty Details:</h3>
+    <ul>
+        <li><strong>Enemy Health:</strong> {{ difficulty_data.enemy_health|default:"N/A" }}%</li>
+        <li><strong>Player Health:</strong> {{ difficulty_data.player_health|default:"N/A" }}%</li>
+        <li><strong>Enemy Damage:</strong> {{ difficulty_data.enemy_damage|default:"N/A" }}%</li>
+        <li><strong>Resources:</strong> {{ difficulty_data.resources|default:"N/A" }}%</li>
+    </ul>
+{% else %}
+    <p>No specific data for this difficulty level.</p>
+{% endif %}
+
+<p><strong>Custom Difficulty Allowed:</strong> {{ game.custom_difficulty_allowed|yesno:"Yes,No" }}</p>
+<p><strong>New Game Plus:</strong> {{ game.new_game_plus|yesno:"Yes,No" }}</p>
+
+{% if game.description %}
+<h3>Description:</h3>
+<p>{{ game.description }}</p>
+{% endif %}
+
 <a href="{% url 'game_list' %}">Back to Game List</a>
 {% endblock %}

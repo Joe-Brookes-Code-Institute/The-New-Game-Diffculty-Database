@@ -8,7 +8,17 @@ def game_list(request):
 
 def game_detail(request, game_id):
     game = get_object_or_404(Game, pk=game_id)
-    return render(request, 'game_difficulty_database/game_detail.html', {'game': game})
+    selected_difficulty = request.GET.get('difficulty', game.default_difficulty)
+    
+    difficulty_data = game.difficulty_settings.get(selected_difficulty, {})
+    
+    context = {
+        'game': game,
+        'difficulties': Game.DIFFICULTY_CHOICES,
+        'selected_difficulty': selected_difficulty,
+        'difficulty_data': difficulty_data,
+    }
+    return render(request, 'game_difficulty_database/game_detail.html', context)
 
 # Add this new view function
 def add_game(request):

@@ -89,7 +89,6 @@ TEMPLATES = [
 
 
 
-
 WSGI_APPLICATION = 'Game_Datebase.wsgi.application'
 
 

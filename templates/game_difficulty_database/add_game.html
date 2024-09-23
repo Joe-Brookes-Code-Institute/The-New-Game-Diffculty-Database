@@ -1,10 +1,49 @@
-{% extends 'game_difficulty_database/base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
-    <h2>Add New Game</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Add Game</button>
-    </form>
+<h2>Add New Game</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    <div>
+        {{ form.name.errors }}
+        <label for="{{ form.name.id_for_label }}">Name:</label>
+        {{ form.name }}
+    </div>
+    <div>
+        {{ form.description.errors }}
+        <label for="{{ form.description.id_for_label }}">Description:</label>
+        {{ form.description }}
+    </div>
+    <div>
+        {{ form.default_difficulty.errors }}
+        <label for="{{ form.default_difficulty.id_for_label }}">Default Difficulty:</label>
+        {{ form.default_difficulty }}
+    </div>
+    <div>
+        {{ form.custom_difficulty_allowed.errors }}
+        <label for="{{ form.custom_difficulty_allowed.id_for_label }}">Custom Difficulty Allowed:</label>
+        {{ form.custom_difficulty_allowed }}
+    </div>
+    <div>
+        {{ form.new_game_plus.errors }}
+        <label for="{{ form.new_game_plus.id_for_label }}">New Game Plus:</label>
+        {{ form.new_game_plus }}
+    </div>
+
+    <h3>Difficulty Settings</h3>
+    {% for difficulty, display in form.instance.DIFFICULTY_CHOICES %}
+        <fieldset>
+            <legend>{{ display }}</legend>
+            {% for setting in "player_health,enemy_health,resources,enemy_damage".split(',') %}
+                <div>
+                    <label for="id_{{ difficulty }}_{{ setting }}">{{ setting|title }}:</label>
+                    <input type="number" name="{{ difficulty }}_{{ setting }}" id="id_{{ difficulty }}_{{ setting }}" min="0" max="200" value="100">
+                </div>
+            {% endfor %}
+        </fieldset>
+    {% endfor %}
+
+    <button type="submit">Add Game</button>
+</form>
 {% endblock %}
