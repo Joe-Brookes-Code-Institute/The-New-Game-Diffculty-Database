@@ -15,17 +15,17 @@ class Game(models.Model):
     
     name = models.CharField(max_length=200)
     difficulty = models.CharField(max_length=20, choices=DIFFICULTY_CHOICES, default='normal')
-    release_date = models.DateField()
-    description = models.TextField()
+    description = models.TextField(blank=True)  # Made optional
 
-    # New fields for difficulty settings
-    enemy_health = models.IntegerField(default=100, help_text="Enemy health percentage")
-    player_health = models.IntegerField(default=100, help_text="Player health percentage")
-    resources = models.IntegerField(default=100, help_text="Resources percentage")
+    # New fields for difficulty settings, made optional
+    enemy_health = models.IntegerField(null=True, blank=True, help_text="Enemy health percentage")
+    player_health = models.IntegerField(null=True, blank=True, help_text="Player health percentage")
+    resources = models.IntegerField(null=True, blank=True, help_text="Resources percentage")
 
-    # Checkboxes
-    unlockable = models.BooleanField(default=False)
-    new_game_plus = models.BooleanField(default=False)
+    # Checkboxes, made optional
+    unlockable = models.BooleanField(default=False, blank=True)
+    new_game_plus = models.BooleanField(default=False, blank=True)
+    Custom_Difficulty = models.BooleanField(default=False, blank=True)
 
     def __str__(self):
         return self.name
