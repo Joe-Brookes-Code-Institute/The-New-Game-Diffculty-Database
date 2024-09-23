@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ game.name }}</h1>
+<p><strong>Difficulty:</strong> {{ game.get_difficulty_display }}</p>
+<p><strong>Release Date:</strong> {{ game.release_date }}</p>
+<p><strong>New Game Plus:</strong> {% if game.NGplus %}Yes{% else %}No{% endif %}</p>
+<p><strong>Description:</strong> {{ game.description }}</p>
+<a href="{% url 'game_list' %}">Back to Game List</a>
+{% endblock %}
