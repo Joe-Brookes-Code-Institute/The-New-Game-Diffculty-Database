@@ -14,7 +14,7 @@ class Game(models.Model):
         ('extremely_hard', 'Extremely Hard'),
     ]
     
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=255)
     description = models.TextField(blank=True)
     default_difficulty = models.CharField(max_length=20, choices=DIFFICULTY_CHOICES, default='normal')
     difficulty_settings = models.JSONField(default=dict)
@@ -33,7 +33,7 @@ class Game(models.Model):
             if not isinstance(settings, dict):
                 raise ValidationError(f"Settings for {difficulty} must be a dictionary")
             for setting, value in settings.items():
-                if setting not in ['player_health', 'enemy_health', 'resources', 'enemy_damage']:
+                if setting not in ['player_health', 'enemy_health']:
                     raise ValidationError(f"Invalid setting for {difficulty}: {setting}")
                 if not isinstance(value, int) or value < 0 or value > 200:
                     raise ValidationError(f"Invalid value for {difficulty} {setting}: {value}")

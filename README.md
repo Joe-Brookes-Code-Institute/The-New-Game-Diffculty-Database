@@ -1,131 +1,330 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# The-Game-Diffculty-Database
+![Creating your first README hero image]![image](https://github.com/user-attachments/assets/86d4475c-2c4d-46c3-abca-7d9ae162ca6d)
 
-Welcome Joe Brookes,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
 
-## Gitpod Reminders
+![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=flat=markdown&logoColor=white) ![GitHub contributors](https://img.shields.io/github/contributors/kera-cudmore/readme-examples?style=flat) ![GitHub last commit](https://img.shields.io/github/last-commit/kera-cudmore/readme-examples?style=flat)  ![GitHub Repo stars](https://img.shields.io/github/stars/kera-cudmore/readme-examples?style=social)  ![GitHub forks](https://img.shields.io/github/forks/kera-cudmore/readme-examples?style=social)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+So you're starting to think about your first milestone project, and are brainstorming ideas - but have you thought about your README? This repository (and accompanying webinar) are an introduction to creating your first README - covering what to include, why you need one and how to write it.
 
-`python3 -m http.server`
+Find the slide show for this webinar [here](https://docs.google.com/presentation/d/19_7r_To5bu7UjnZD87hrzWQi63Ij0YpaRH1XFnPZZe8/edit?usp=sharing)
 
-A blue button should appear to click: _Make Public_,
+⭐️ If you found this repo useful for creating your first README, please consider giving the repo a star - and if you mention me in the credits section of your readme, please do send me a message on slack - you'll make my day! 😊
 
-Another blue button should appear to click: _Open Browser_.
+- - -
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+## CONTENTS
 
-A blue button should appear to click: _Make Public_,
+* [Whats A README?](#whats-a-readme)
+* [What Makes a Good README?](#what-makes-a-good-readme)
+* [README Examples](#readme-examples)
+* [How to Write Your README](#how-to-write-your-readme)
+  * [Headings](#headings)
+  * [Links](#links)
+  * [Inserting Images](#inserting-images)
+  * [Italic, Bold & Code](#italic-bold-and-code)
+  * [Strikethrough & Bullet Points](#strikethrough--bullet-points)
+  * [Code Blocks](#code-blocks)
+  * [Tables](#tables)
+* [Nice Extras & Other Interesting Tools](#nice-extras--other-interesting-tools)
+* [Further Reading](#further-reading)
+* [Credits](#credits)
+  * [Media](#media)
+  * [Acknowledgments](#acknowledgments)
 
-Another blue button should appear to click: _Open Browser_.
+- - -
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## What's is The-Game-Diffculty-Database
 
-To log into the Heroku toolbelt CLI:
+The Game Difficulty Database is a platform designed to provide detailed information about the difficulty settings of various games. It helps players understand how different difficulty levels affect gameplay and overall experience.
+- - -
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## Why
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+Many games lack detailed descriptions of their difficulty settings, often providing only vague statements. This database aims to fill that gap by offering comprehensive rundowns and opinions on optimal settings, enhancing players' overall enjoyment and helping them make informed decisions.
 
-### Connecting your Mongo database
+- - -
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+## Examples
 
-------
+![image](https://github.com/user-attachments/assets/96dd5766-cf1f-40db-9368-43692b584f13)
+- - -
 
-## Release History
+## How to use the Database
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+Submitting Information
+To submit information about a game:
 
-**June 18, 2024,** Add Mongo back into template
+Click the "Submit" button.
+Fill out the form with game details and difficulty settings.
+Click "Submit" to add your information to the database.
+Retrieving Information
+To retrieve information:
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+Navigate to the search section.
+Select the categories you're interested in, such as custom difficulty features.
+Browse through the results based on your selected criteria.
 
-**May 28 2024:** Fix Mongo and Links installs
+### Features
 
-**April 26 2024:** Update node version to 16
+Submit Game Information: Add details about game difficulty settings.
+Search Functionality: Find games based on various difficulty features and settings.
 
-**September 20 2023:** Update Python version to 3.9.17.
+### Links
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### Inserting Images
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+Images can be inserted in your README in the same way as a link, if you only want the name of the image to be displayed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+If you want the image itself to be visible in the README, you just need to place an exclamation mark at the front of the link, example shown below:
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+![Inserting an Image Link Example](documentation/imagelink-example.png)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+Its important to be mindful of what you use in the square brackets of an image link, as this is what will be displayed on the page if the image fails to load, so make sure to use something descriptive, similar to an image alt tag.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+When using images in your README, its good practice to compress the image first (PNG format seems to work best), I can recommend [tinyPNG](https://tinypng.com/). I then like to keep all images etc used within the README in a folder called *documentation*. This is good practice as it keeps the sites assets seperate from the assets used in your documentation.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+###  Italic, Bold and Code![image](https://github.com/user-attachments/assets/910dcfa0-0040-4e73-9a83-26c84fceb02b)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+*Italic text* we can either use an asterisk or an underscore before and after the text.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+**Bold text** we can either use double asterisks or double underscores before and after the text.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+`Code` we enclose the text in backticks.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+![Styled Text Examples](documentation/styledtext-example.png)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Strikethrough & Bullet Points
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+~~strikethrough~~ We use double tilder before and after.
 
-------
+* Bullet points, we use either an asterisk or a dash.
+  * Nested Bullet Points are created by indenting two spaces
+    * Another Nested Bullet Point
 
-## FAQ about the uptime script
+![Strikethrough & Bullet Point Example](documentation/strikethrough-bullet-example.png)
 
-**Why have you added this script?**
+To create a numbered list we simply put a number followed by a full stop, then a space before the content.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+1. First item
+2. Second item
+3. Third Item
 
-**How will this affect me?**
+![Numbered list example code](documentation/numbered-list-example.png)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Code Blocks
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+Code blocks can be used in Markdown to display a larger block of code. To create a code block you need to prefix the text with three backticks and end with three backticks after.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+Code blocks can be language specific, you simply need to add the language after the first set of backticks - if you don't want to use a specific language, you can use text.
 
-**So….?**
+**Plain Text Code Block:**
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+```text
+function fibonacci(num, memo) {
+  memo = memo || {};
 
-**Can I opt out?**
+  if (memo[num]) return memo[num];
+  if (num <= 1) return 1;
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
+  return memo[num] = fibonacci(num - 1, memo) + fibonacci(num - 2, memo);
+}
 ```
-pkill uptime.sh
-rm .vscode/uptime.sh
+
+**JavaScript Code Block:**
+
+```javascript
+function fibonacci(num, memo) {
+  memo = memo || {};
+
+  if (memo[num]) return memo[num];
+  if (num <= 1) return 1;
+
+  return memo[num] = fibonacci(num - 1, memo) + fibonacci(num - 2, memo);
+}
 ```
 
-**Anything more?**
+Code Block Markdown Examples:
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+![Code Block Examples](documentation/codeblock-example.png)
 
----
+### Tables
 
-Happy coding!
+Tables can be a great way to display information in your README, but can be a bit fiddly to get your head around at first. Tables are created using the pipe symbol ( | ) which is placed on either side of the content, creating the sides of the table. The first row of the table will be the headings for the table. This is then followed by a row with 3 dashes in each cell, and then you just add the contents for the table in the following rows.
+
+-----------------------------------------------------------
+| Navigation Bar: Home | Games | Submit | Login/Register  |
+-----------------------------------------------------------
+|               Submit Difficulty Information              |
+|---------------------------------------------------------|
+|                                                         |
+|   Game:               [Dropdown]                        |
+|                                                         |
+|   Difficulty:         [Dropdown]                        |
+|                                                         |
+|   Enemy Health:       [Input Field]                     |
+|                                                         |
+|   AI Difficulty:      [Dropdown or Input Field]          |
+|                                                         |
+|   Player Health:      [Input Field]                     |
+|                                                         |
+|   Resources Available: [Dropdown or Input Field]        |
+|                                                         |
+|   Opinion:            [Text Area]                       |
+|                                                         |
+|---------------------------------------------------------|
+|                Additional Features (Tick Boxes)         |
+|   [ ] Extra Content                                      |
+|   [ ] Exclusive Unlockables                              |
+|   [ ] Trophies                                           |
+|   [ ] Unlockable Difficulty                              |
+|   [ ] New Game Plus Only                                 |
+|   [ ] Switchable Mid-Game                                |
+|   [ ] Trophy Stacking                                    |
+|---------------------------------------------------------|
+|   Other (Not Listed): [Text Box for custom features]     |
+|---------------------------------------------------------|
+|                [Submit Button]                          |
+-----------------------------------------------------------
+
+-----------------------------------------------------------
+| Navigation Bar: Home | Games | Submit | Login/Register  |
+-----------------------------------------------------------
+|               Submit Difficulty Information              |
+|---------------------------------------------------------|
+|                                                         |
+|   Game:               [Devil May Cry V]                 |
+|                                                         |
+|   Difficulty:         [Dante Must Die/Very Hard]        |
+|                                                         |
+|   Enemy Health:       [200%]                            |
+|                                                         |
+|   AI Difficulty:      [Yes]                             |
+|                                                         |
+|   Player Health:      [33%]                             |
+|                                                         |
+|   Resources Available: [Lowered]                        |
+|                                                         |
+|   Opinion:                                               |
+|                                                         |
+|       Dante Must Die difficulty is only available for    |
+|       players who have beaten the game on both Devil     |
+|       Hunter and Son of Sparda difficulties. However,    |
+|       for players on the PS5 and Series X versions, it   |
+|       can be unlocked simply by beating the game once    |
+|       on Legendary Dark Knight. This difficulty setting  |
+|       is generally aimed at players playing on New Game  |
+|       Plus who have already maxed out their character    |
+|       data. It includes rearranged enemies who are both  |
+|       more intelligent, more aggressive, and can take    |
+|       more damage.                                       |
+|                                                         |
+|       While this could be irritating in some genres,     |
+|       I would say that Devil May Cry does a good job of  |
+|       handling it due to the game's focus on combos,     |
+|       tricks, and dealing a large amount of damage to    |
+|       individual enemies without taking a single hit.    |
+|       As a result, I don't feel that the increased enemy |
+|       health detracts from the core pillars of the game. |
+|                                                         |
+|       If there is one major flaw to Dante Must Die       |
+|       difficulty, it's that the game's health and life   |
+|       system is still very exploitable. Players can      |
+|       easily spam gold orbs, and to make things      |
+|       worse, there is a pay-to-win system where players  |
+|       can pay real money to come back to life in the     |
+|       game. This somewhat hurts my ability to recommend  |
+|       this as a good difficulty setting, although in     |
+|       most other ways, it's a solid and unexpected       |
+|       inclusion.                                         |
+|                                                         |
+|---------------------------------------------------------|
+|                Additional Features (Tick Boxes)         |
+|   [ ] Extra Content                                      |
+|   [X] Exclusive Unlockables                              |
+|   [X] Trophies                                           |
+|   [X] Unlockable Difficulty                              |
+|   [X] New Game Plus Only                                 |
+|   [X] Switchable Mid-Game                                |
+|   [X] Trophy Stacking   
+|  `[X] PTW
+|---------------------------------------------------------|
+|   Other (Not Listed): [Text Box for custom features]     |
+|---------------------------------------------------------|
+|                [Submit Button]                          |
+-----------------------------------------------------------
+
+-----------------------------------------------------------
+
+
+
+
+
+Markdown for creating a table:
+
+![Table Example](documentation/table-example.png)
+
+You can also justify the contents within a table! You simply need to add a colon to the second row of dashes - place the colon on the left of the dashes for left justification, to the right of the dashes for right justification and to center the text, place a colon on each side of the dashes.
+
+| Table Heading 1 for justification example | Table Heading 2 For justification example |
+| :--- | :--- |
+| Justify contents| To the Left |
+
+| Table Heading 1 for justification example | Table Heading 2 For justification example |
+| ---: | ---: |
+| Justify contents | To the Right |
+
+| Table Heading 1 for justification example | Table Heading 2 For justification example |
+| :---: | :---: |
+| Justify contents | In the Center |
+
+![Table Justification Example Code](documentation/table-justification-example.png)
+ - - -
+
+## Nice Extras & Other Interesting Tools
+
+Nice extras we could include in the README:
+
+[shields.io Badges](https://shields.io/) -  lots of badges relating to site builds. I like to add these after the site image at the top of my README. I like to include the following badges in my projects, but have an explore and see if there are any others you could use (they are also great to include in your GitHub Profile!)
+
+* GitHub last commit (Shows when the last commit to the repo was)
+* GitHub contributors (Great to show at a glance you are the only contributor to your project)
+* GitHub language count (Shows how many languages used in project)
+* GitHub top language (to display top language used in the project)
+* W3C validation (shows at a glance whether your HTML passes validation)
+
+![Shields.io Exmaple Badges](documentation/shields-example.png)
+
+[Gyazo GIF](https://gyazo.com) - A tool that allows you to capture a short video recording of your screen as a GIF. I like to use this to document a bug I might have (For example in my second project, each time a button was pressed the score would increase when it shouldn't have - this was a great way to capture what was happening). Have a look, or perhaps you have your own preferred screen recording tool you prefer.
+
+[Chrome Extension Spell Checker](https://chrome.google.com/webstore/detail/webpage-spell-check/mgdhaoimpabdhmacaclbbjddhngchjik) - I love to use this both on my site and to check over my README before submission, as its easy to get spelling errors creeping into your project as you burn the midnight oil towards the end as your deadline is looming.
+
+[Chrome Exension WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) - WAVE is a web accessibility evaluation tool developed by [WebAIM.org](https://wave.webaim.org/). It provides visual feedback about the accessibility of your web content by injecting icons and indicators into your page. No automated tool can tell you if your page is accessible, but WAVE facilitates human evaluation and educates about accessibility issues. All analysis is done entirely within the Chrome browser allowing secure valuation of intranet, local, password protected, and other sensitive web pages. I believe there is also an extension for Firefox.
+
+[Web Disability Simulator](https://chrome.google.com/webstore/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla) - A fantastic chrome extension that allows you to simulate how certain disabilities can affect the users experience of your site. Really useful if you're using colour to represent a result - for example in a quiz.
+
+- - -
+
+## Further Reading
+
+* [Markdown Syntax](https://www.markdownguide.org/basic-syntax/) - This site is really comprehensive on all the different things you can do in Markdown.
+* [Markdown Table Generator](https://www.tablesgenerator.com/markdown_tables) - This may be useful to have a play around with to better understand how tables work in Markdown.
+* [Markdown Cheatsheet](https://github.com/atapas/markdown-cheatsheet) - A great markdown cheatsheet created by Atapas.
+* [Code Institute Sample README](https://github.com/Code-Institute-Solutions/SampleREADME) - Sample README created by the Code Institute
+
+## Credits
+
+### Media
+
+• All screenshots of code used in this README were taken by myself from my own milestone project repositories or Code Institute hackathon projects I have participated in.
+
+• [README hero image](https://www.slidescarnival.com/aliena-free-presentation-template/4597) - Slide template from Slide Carnival
+
+### Acknowledgments
+
+* [Ed](https://github.com/Edb83) - For letting me know about the heading links feature.
+* [Dave](https://github.com/daveyjh) - For letting me know about table justification in markdown.
+* Nerd Alert - For cheering me on while creating this webinar, and for proof-reading my documents.
+* A big thank you to Jim at Code Institute for the opportunity to be a channel lead for the Milestone 1 slack channel.

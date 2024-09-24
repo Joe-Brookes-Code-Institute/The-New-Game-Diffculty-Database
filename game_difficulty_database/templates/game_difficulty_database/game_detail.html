@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ game.name }}</h1>
+<p>{{ game.description }}</p>
+
+<h2>Difficulty Settings</h2>
+<form method="get">
+    <select name="difficulty" onchange="this.form.submit()">
+        {% for difficulty, display in difficulties %}
+            <option value="{{ difficulty }}" {% if difficulty == selected_difficulty %}selected{% endif %}>
+                {{ display }}
+            </option>
+        {% endfor %}
+    </select>
+</form>
+
+<h3>{{ selected_difficulty|title }} Settings</h3>
+<ul>
+    {% for setting, value in difficulty_data.items %}
+        <li>{{ setting|title }}: {{ value }}</li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'game_list' %}">Back to Game List</a>
+{% endblock %}

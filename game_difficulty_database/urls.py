@@ -3,7 +3,8 @@ from . import views
 
 urlpatterns = [
     path('', views.game_list, name='game_list'),
-    path('game/<int:game_id>/', views.game_detail, name='game_detail'),
-    path('add/', views.add_game, name='add_game'),  # Add this line if it's missing
+    path('<int:game_id>/', views.game_detail, name='game_detail'),
+    path('add/', views.add_game, name='add_game'),
+    path('<int:game_id>/update/', views.update_game, name='update_game'),
+    path('<int:game_id>/delete/', views.delete_game, name='delete_game'),
 ]
-    # Add other paths as needed
