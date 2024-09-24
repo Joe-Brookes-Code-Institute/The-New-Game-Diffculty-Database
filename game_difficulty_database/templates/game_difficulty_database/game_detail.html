@@ -2,6 +2,9 @@
 
 {% block content %}
 <h1>{{ game.name }}</h1>
+{% if game.image %}
+    <img src="{{ game.image.url }}" alt="{{ game.name }}" style="max-width: 300px; height: auto;">
+{% endif %}
 <p>{{ game.description }}</p>
 <p>Default Difficulty: {{ game.get_default_difficulty_display }}</p>
 
@@ -11,12 +14,14 @@
         <th>Difficulty</th>
         <th>Player Health</th>
         <th>Enemy Health</th>
+        <th>Unlockable</th>
     </tr>
-    {% for setting in difficulty_settings %}
+    {% for setting in game.difficulty_settings.all %}
     <tr>
         <td>{{ setting.get_difficulty_display }}</td>
         <td>{{ setting.player_health }}</td>
         <td>{{ setting.enemy_health }}</td>
+        <td>{{ setting.unlockable|yesno:"Yes,No" }}</td>
     </tr>
     {% endfor %}
 </table>

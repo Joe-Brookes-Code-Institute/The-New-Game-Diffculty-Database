@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}{% if editing %}Edit{% else %}Add New{% endif %} Blog Post{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>{% if editing %}Edit{% else %}Add New{% endif %} Blog Post</h1>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <div class="form-group">
+            <label for="{{ form.title.id_for_label }}">Title:</label>
+            {{ form.title }}
+            {% if form.title.errors %}
+                <div class="alert alert-danger">{{ form.title.errors }}</div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.content.id_for_label }}">Content:</label>
+            {{ form.content }}
+            {% if form.content.errors %}
+                <div class="alert alert-danger">{{ form.content.errors }}</div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.image.id_for_label }}">Image:</label>
+            {{ form.image }}
+            {% if form.image.errors %}
+                <div class="alert alert-danger">{{ form.image.errors }}</div>
+            {% endif %}
+        </div>
+
+        <button type="submit" class="btn btn-primary">{% if editing %}Update{% else %}Create{% endif %} Post</button>
+    </form>
+    <a href="{% url 'blog_list' %}" class="btn btn-secondary mt-2">Cancel</a>
+</div>
+{% endblock %}

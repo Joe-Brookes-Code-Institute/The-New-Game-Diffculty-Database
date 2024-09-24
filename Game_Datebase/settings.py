@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'cloudinary',
     'game_difficulty_database.apps.GameDifficultyDatabaseConfig',  # Keep this one maybe
+    'blog',
 ]
 ##game_difficulty_database
 MIDDLEWARE = [

@@ -2,7 +2,7 @@
 
 {% block content %}
 <h1>{% if game %}Update{% else %}Add{% endif %} Game</h1>
-<form method="post">
+<form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <h2>Difficulty Settings</h2>
