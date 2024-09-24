@@ -3,24 +3,24 @@
 {% block content %}
 <h1>{{ game.name }}</h1>
 <p>{{ game.description }}</p>
+<p>Default Difficulty: {{ game.get_default_difficulty_display }}</p>
 
 <h2>Difficulty Settings</h2>
-<form method="get">
-    <select name="difficulty" onchange="this.form.submit()">
-        {% for difficulty, display in difficulties %}
-            <option value="{{ difficulty }}" {% if difficulty == selected_difficulty %}selected{% endif %}>
-                {{ display }}
-            </option>
-        {% endfor %}
-    </select>
-</form>
-
-<h3>{{ selected_difficulty|title }} Settings</h3>
-<ul>
-    {% for setting, value in difficulty_data.items %}
-        <li>{{ setting|title }}: {{ value }}</li>
+<table>
+    <tr>
+        <th>Difficulty</th>
+        <th>Player Health</th>
+        <th>Enemy Health</th>
+    </tr>
+    {% for setting in difficulty_settings %}
+    <tr>
+        <td>{{ setting.get_difficulty_display }}</td>
+        <td>{{ setting.player_health }}</td>
+        <td>{{ setting.enemy_health }}</td>
+    </tr>
     {% endfor %}
-</ul>
+</table>
 
-<a href="{% url 'game_list' %}">Back to Game List</a>
+<a href="{% url 'update_game' game.id %}">Edit Game</a>
+<a href="{% url 'delete_game' game.id %}">Delete Game</a>
 {% endblock %}
