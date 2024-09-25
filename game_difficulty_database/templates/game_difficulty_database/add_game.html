@@ -4,6 +4,11 @@
 <h1>{% if game %}Update{% else %}Add{% endif %} Game</h1>
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
+    
+    <button type="submit" class="btn btn-primary submit-button">
+        {% if game %}Update{% else %}Add{% endif %} Game
+    </button>
+    
     {{ form.as_p }}
     <h2>Difficulty Settings</h2>
     {{ formset.management_form }}
@@ -13,6 +18,5 @@
             {{ form.as_p }}
         </div>
     {% endfor %}
-    <button type="submit">{% if game %}Update{% else %}Add{% endif %} Game</button>
 </form>
 {% endblock %}

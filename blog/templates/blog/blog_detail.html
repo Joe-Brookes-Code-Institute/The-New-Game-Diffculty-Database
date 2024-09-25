@@ -1,14 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{{ post.title }}</h1>
-<p>Published on: {{ post.date_published|date:"F j, Y" }}</p>
-{% if post.image %}
-    <img src="{{ post.image.url }}" alt="{{ post.title }}" style="max-width: 100%;">
-{% endif %}
-<div>{{ post.content|linebreaks }}</div>
+<article class="blog-post">
+    <h1>{{ post.title }}</h1>
+    <div class="blog-post-meta">Published on {{ post.date_published|date:"F j, Y" }}</div>
+    {% if post.image %}
+        <img src="{{ post.image.url }}" alt="{{ post.title }}" style="max-width: 100%; height: auto;">
+    {% endif %}
+    <div>{{ post.content|linebreaks }}</div>
+</article>
+
 {% if user.is_staff %}
     <a href="{% url 'edit_blog_post' post.id %}" class="btn btn-secondary">Edit Post</a>
 {% endif %}
-<a href="{% url 'blog_list' %}" class="btn btn-primary">Back to Blog List</a>
+<a href="{% url 'blog_list' %}" class="btn">Back to Blog List</a>
 {% endblock %}

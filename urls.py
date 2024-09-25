@@ -1,13 +1,14 @@
 from django.contrib import admin
 from django.urls import path, include
-from django.conf import settings
-from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('game_difficulty_database.urls')),
-    path('blog/', include('blog.urls')),  # Add this line to include blog ,
+    path('blog/', include('blog.urls')),
+    path('accounts/', include('allauth.urls')),
 ]
 
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+from django.urls import get_resolver
+resolver = get_resolver()
+for url_pattern in resolver.url_patterns:
+    print(url_pattern)
