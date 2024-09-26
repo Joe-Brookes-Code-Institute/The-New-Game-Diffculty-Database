@@ -35,11 +35,6 @@ ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1,8000-joebro
 
 CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS', 'https://*.codeinstitute-ide.net,https://*.herokuapp.com').split(',')
 
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
-    'allauth.account.auth_backends.AuthenticationBackend',
-]
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -94,7 +89,6 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
-
 
 WSGI_APPLICATION = 'Game_Datebase.wsgi.application'
 
@@ -162,9 +156,11 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 ACCOUNT_LOGOUT_REDIRECT_URL = '/'
 ACCOUNT_RATE_LIMITS = {
-    'login_failed': {'rate': '5/5m', 'block': '300s'},
+    'login_failed': '5/5m',
 }
 ACCOUNT_RESET_PASSWORD_WITHIN = '24h'
+ACCOUNT_ADAPTER = 'allauth.account.adapter.DefaultAccountAdapter'
+ACCOUNT_FORMS = {'signup': 'allauth.account.forms.SignupForm'}
 
 # Social account providers (if needed)
 # SOCIALACCOUNT_PROVIDERS = {
@@ -210,3 +206,12 @@ SECURE_SSL_REDIRECT = False
 SESSION_COOKIE_SECURE = not DEBUG
 CSRF_COOKIE_SECURE = not DEBUG
 SESSION_COOKIE_AGE = 1209600  # 2 weeks, in seconds
+
+# Additional security settings for production
+if not DEBUG:
+    SECURE_HSTS_SECONDS = 31536000  # 1 year
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = True
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    SECURE_BROWSER_XSS_FILTER = True
+    X_FRAME_OPTIONS = 'DENY'

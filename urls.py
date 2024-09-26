@@ -5,7 +5,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('game_difficulty_database.urls')),
     path('blog/', include('blog.urls')),
-    path('accounts/', include('allauth.urls')),
+     path('accounts/', include('allauth.urls'))
 ]
 
 from django.urls import get_resolver

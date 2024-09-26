@@ -20,6 +20,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('game_difficulty_database.urls')),
-    path('blog/', include('blog.urls')),  # Add this line to include blog URLs
-    # Include other apps as needed
+    path('blog/', include('blog.urls')),
+    path('accounts/', include('allauth.urls')),  # Make sure this line is present
 ]
