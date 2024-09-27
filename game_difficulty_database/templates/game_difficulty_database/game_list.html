@@ -1,11 +1,25 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Games</h1>
-<ul>
-{% for game in games %}
-    <li><a href="{% url 'game_detail' game.id %}">{{ game.name }}</a></li>
-{% endfor %}
-</ul>
-<a href="{% url 'add_game' %}">Add New Game</a>
+<div class="introduction">
+    <h1>Welcome to the Game Difficulty Database</h1>
+    <p class="subheading">Our site is designed to help gamers of all types discover games that suit their preferred difficulty level. We aggregate difficulty ratings from various sources and provide detailed information on each game, including user reviews of various difficulty settings</p>
+    <p>{{ introduction_text }}</p>
+</div>
+<div class="game-list">
+    <h1>Games</h1>
+    {% if games %}
+        <ul>
+        {% for game in games %}
+            <li><a href="{% url 'game_detail' game.id %}">{{ game.name }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No games available at the moment.</p>
+    {% endif %}
+</div>
+
+<div class="add-game">
+    <a href="{% url 'add_game' %}" class="btn btn-primary">Add New Game</a>
+</div>
 {% endblock %}

@@ -1,0 +1,38 @@
+/* Example styles - adjust as needed */
+.allauth-form-inner-content {
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.allauth-form-inner-content h1 {
+    text-align: center;
+    color: #333;
+}
+
+.allauth-form-inner-content input[type="text"],
+.allauth-form-inner-content input[type="email"],
+.allauth-form-inner-content input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.allauth-form-inner-content button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.allauth-form-inner-content button[type="submit"]:hover {
+    background-color: #0056b3;
+}

@@ -1,5 +1,9 @@
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
+from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 class Game(models.Model):
     DIFFICULTY_CHOICES = [
@@ -17,7 +21,8 @@ class Game(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True)
     default_difficulty = models.CharField(max_length=20, choices=DIFFICULTY_CHOICES, default='normal')
-    image = models.ImageField(upload_to='game_images/', null=True, blank=True)
+    image = CloudinaryField('image', null=True, blank=True)
+    added_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -34,3 +39,33 @@ class DifficultySettings(models.Model):
 
     def __str__(self):
         return f"{self.game.name} - {self.get_difficulty_display()}"
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    bio = models.TextField(max_length=500, blank=True)
+    favorite_game = models.ForeignKey(Game, on_delete=models.SET_NULL, null=True, blank=True)
+    preferred_difficulty = models.CharField(max_length=20, choices=Game.DIFFICULTY_CHOICES, default='normal')
+    avatar = CloudinaryField('avatar', null=True, blank=True)
+
+    def __str__(self):
+        return self.user.username
+
+class UserGamePreference(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    game = models.ForeignKey(Game, on_delete=models.CASCADE)
+    preferred_difficulty = models.CharField(max_length=20, choices=Game.DIFFICULTY_CHOICES)
+
+    class Meta:
+        unique_together = ['user', 'game']
+
+    def __str__(self):
+        return f"{self.user.username}'s preference for {self.game.name}"
+
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        UserProfile.objects.create(user=instance)
+
+@receiver(post_save, sender=User)
+def save_user_profile(sender, instance, **kwargs):
+    instance.userprofile.save()

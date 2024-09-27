@@ -3,6 +3,14 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib import messages
 from .models import BlogPost
 from .forms import BlogPostForm
+from django.core.paginator import Paginator
+
+def blog_list(request):
+    all_posts = BlogPost.objects.all().order_by('-date_published')
+    paginator = Paginator(all_posts, 10)  # Show 10 posts per page
+    page_number = request.GET.get('page')
+    posts = paginator.get_page(page_number)
+    return render(request, 'blog/blog_list.html', {'posts': posts})
 
 def blog_list(request):
     posts = BlogPost.objects.all().order_by('-date_published')

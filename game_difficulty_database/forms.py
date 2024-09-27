@@ -1,5 +1,15 @@
 from django import forms
-from .models import Game, DifficultySettings
+from .models import Game, DifficultySettings, UserProfile, UserGamePreference
+
+class UserProfileForm(forms.ModelForm):
+    class Meta:
+        model = UserProfile
+        fields = ['bio', 'favorite_game', 'preferred_difficulty', 'avatar']
+
+class UserGamePreferenceForm(forms.ModelForm):
+    class Meta:
+        model = UserGamePreference
+        fields = ['game', 'preferred_difficulty']
 
 class GameForm(forms.ModelForm):
     class Meta:
