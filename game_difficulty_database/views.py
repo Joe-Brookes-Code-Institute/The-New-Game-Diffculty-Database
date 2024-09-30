@@ -104,4 +104,8 @@ def set_game_preference(request, game_id):
             return redirect('game_detail', game_id=game.id)
     else:
         form = UserGamePreferenceForm(instance=preference)
-    return render(request, 'game_difficulty_database/set_game_preference.html', {'form': form, 'game': game})
+    return render(request, 'game_difficulty_database/set_game_preference.html', {'form': form, 'game': game})   
+    
+def game_list(request):
+    games = Game.objects.all().order_by('name')  # Replace 'name' with the field you want to sort by
+    return render(request, 'game_difficulty_database/game_list.html', {'games': games})
