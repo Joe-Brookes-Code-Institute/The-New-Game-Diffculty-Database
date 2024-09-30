@@ -1,0 +1,4 @@
+tasks:
+  - name: Set Heroku API Key
+    command: |
+      echo "export HEROKU_API_KEY=$HEROKU_API_KEY" >> ~/.bashrc

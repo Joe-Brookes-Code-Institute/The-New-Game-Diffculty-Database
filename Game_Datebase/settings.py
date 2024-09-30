@@ -33,9 +33,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'your-default-secret-key')  # Fallback
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1,8000-joebrookesc-thenewgamed-6tlgqcr0ma2.ws.codeinstitute-ide.net').split(',')
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+ALLOWED_HOSTS += ['.gitpod.io', '.ws.codeinstitute-ide.net']
 
-CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS', 'https://*.codeinstitute-ide.net,https://*.herokuapp.com').split(',')
+CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS', 'https://*.codeinstitute-ide.net,https://*.gitpod.io').split(',')
 
 # Application definition
 
@@ -47,10 +48,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',  # required for allauth
+    'django_extensions',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'django_extensions',
     'cloudinary_storage',
     'cloudinary',
     'game_difficulty_database.apps.GameDifficultyDatabaseConfig',
@@ -170,7 +171,6 @@ ACCOUNT_RATE_LIMITS = {
     'login_failed': '5/5m',
 }
 ACCOUNT_RESET_PASSWORD_WITHIN = '24h'
-ACCOUNT_ADAPTER = 'allauth.account.adapter.DefaultAccountAdapter'
 ACCOUNT_ADAPTER = 'Game_Datebase.adapters.CustomAccountAdapter'
 ACCOUNT_FORMS = {
     'login': 'allauth.account.forms.LoginForm',
