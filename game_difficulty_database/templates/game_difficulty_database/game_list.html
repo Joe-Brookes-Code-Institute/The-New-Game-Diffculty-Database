@@ -6,6 +6,12 @@
     <p class="subheading">Our site is designed to help gamers of all types discover games that suit their preferred difficulty level. We aggregate difficulty ratings from various sources and provide detailed information on each game, including user reviews of various difficulty settings</p>
     <p>{{ introduction_text }}</p>
 </div>
+
+<form method="GET" action="{% url 'game_list' %}">
+    <input type="text" name="q" value="{{ query|default:'' }}" placeholder="Search games...">
+    <button type="submit">Search</button>
+</form>
+
 <div class="game-list">
     <h1>Games</h1>
     {% if games %}

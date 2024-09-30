@@ -1,8 +1,10 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.db.models import Q
 from .models import Game, DifficultySettings, UserProfile, UserGamePreference
 from .forms import GameForm, GameDifficultySettingsFormSet, UserProfileForm, UserGamePreferenceForm
+
 
 def game_list(request):
     games = Game.objects.all().order_by('name')
@@ -109,3 +111,19 @@ def set_game_preference(request, game_id):
 def game_list(request):
     games = Game.objects.all().order_by('name')  # Replace 'name' with the field you want to sort by
     return render(request, 'game_difficulty_database/game_list.html', {'games': games})
+
+def game_list(request):
+    games = Game.objects.all().order_by('name')
+    query = request.GET.get('q')
+    if query:
+        games = games.filter(
+            Q(name__icontains=query) |
+            Q(description__icontains=query)
+        )
+    introduction_text = "Welcome to the official blog of the Game Difficulty Database..."
+    
+    return render(request, 'game_difficulty_database/game_list.html', {
+        'games': games,
+        'introduction_text': introduction_text,
+        'query': query,
+    })
