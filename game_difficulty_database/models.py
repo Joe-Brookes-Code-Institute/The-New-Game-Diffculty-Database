@@ -20,7 +20,7 @@ class Game(models.Model):
     
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True)
-    default_difficulty = models.CharField(max_length=20, choices=DIFFICULTY_CHOICES, default='normal')
+    recommended_difficulty = models.CharField(max_length=50, choices=DIFFICULTY_CHOICES, default='normal') 
     image = CloudinaryField('image', null=True, blank=True)
     added_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
 

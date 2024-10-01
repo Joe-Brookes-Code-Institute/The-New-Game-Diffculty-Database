@@ -14,7 +14,7 @@ class UserGamePreferenceForm(forms.ModelForm):
 class GameForm(forms.ModelForm):
     class Meta:
         model = Game
-        fields = ['name', 'description', 'default_difficulty', 'image']
+        fields = ['name', 'description', 'recommended_difficulty', 'image']
 
 class DifficultySettingsForm(forms.ModelForm):
     class Meta:

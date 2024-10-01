@@ -6,7 +6,7 @@ class DifficultySettingsInline(admin.TabularInline):
     extra = 1
 
 class GameAdmin(admin.ModelAdmin):
-    list_display = ('name', 'default_difficulty')
+    list_display = ('name', 'recommended_difficulty')
     inlines = [DifficultySettingsInline]
 
 class DifficultySettingsAdmin(admin.ModelAdmin):
