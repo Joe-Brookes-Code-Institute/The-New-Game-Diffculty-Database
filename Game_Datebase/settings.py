@@ -38,7 +38,7 @@ DEBUG = True
 # ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
 # ALLOWED_HOSTS += ['.gitpod.io', '.ws.codeinstitute-ide.net']
 
-AALLOWED_HOSTS = [
+ALLOWED_HOSTS = [
     '8000-joebrookesc-thenewgamed-6tlgqcr0ma2.ws.codeinstitute-ide.net',
     'game-diffculty-database-d857f5b0452a.herokuapp.com',
     'localhost',
