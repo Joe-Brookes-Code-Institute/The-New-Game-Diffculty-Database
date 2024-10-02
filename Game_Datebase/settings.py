@@ -15,6 +15,7 @@ import os
 import dj_database_url
 from dotenv import load_dotenv
 
+# Load environment variables from .env file if it exists
 if os.path.isfile("env.py"):
    import env
 
@@ -28,16 +29,12 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', 'your-default-secret-key')  # Fallback for local dev
+SECRET_KEY = os.environ.get('SECRET_KEY', 'your-default-secret-key')  # Fallback for local development
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+DEBUG = True  # Set to False in production
 
-DEBUG = True
-
-# ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
-# ALLOWED_HOSTS += ['.gitpod.io', '.ws.codeinstitute-ide.net']
-
+# Define allowed hosts for the application
 ALLOWED_HOSTS = [
     '8000-joebrookesc-thenewgamed-6tlgqcr0ma2.ws.codeinstitute-ide.net',
     'game-diffculty-database-d857f5b0452a.herokuapp.com',
@@ -45,10 +42,10 @@ ALLOWED_HOSTS = [
     '127.0.0.1'
 ]
 
+# CSRF trusted origins for secure requests
 CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS', 'https://*.codeinstitute-ide.net,https://*.gitpod.io').split(',')
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -56,7 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',  # required for allauth
+    'django.contrib.sites',  # Required for allauth
     'django_extensions',
     'allauth',
     'allauth.account',
@@ -67,6 +64,7 @@ INSTALLED_APPS = [
     'blog',
 ]
 
+# Middleware configuration
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
@@ -79,8 +77,10 @@ MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware',
 ]
 
+# URL configuration
 ROOT_URLCONF = 'Game_Datebase.urls'
 
+# Template configuration
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -92,12 +92,13 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'Game_Datebase.context_processors.home_url',
+                'Game_Datebase.context_processors.home_url',  # Custom context processor
             ],
         },
     },
 ]
 
+# Authentication backends configuration
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
@@ -105,20 +106,12 @@ AUTHENTICATION_BACKENDS = [
 
 WSGI_APPLICATION = 'Game_Datebase.wsgi.application'
 
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-# DATABASES = {
-#    'default': dj_database_url.parse(os.environ.get("DATABASE_URL", "sqlite:///" + str(BASE_DIR / "db.sqlite3")))
-# }
-
+# Database configuration
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
-# Password validation
-# https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
-
+# Password validation settings
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -134,28 +127,19 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# Internationalization
-# https://docs.djangoproject.com/en/4.2/topics/i18n/
-
+# Internationalization settings
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
-
+# Static files (CSS, JavaScript, Images) configuration
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-load_dotenv()  # This loads the variables from .env file
-
+# Load environment variables for Cloudinary configuration
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': os.getenv('CLOUDINARY_CLOUD_NAME'),
     'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
@@ -163,10 +147,9 @@ CLOUDINARY_STORAGE = {
 }
 
 # Default primary key field type
-# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Media files configuration
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
@@ -196,35 +179,21 @@ ACCOUNT_FORMS = {
     'disconnect': 'allauth.socialaccount.forms.DisconnectForm',
 }
 
-
-# Add this setting
+# Use HTML template extension for allauth
 ACCOUNT_TEMPLATE_EXTENSION = 'html'
-
-# Social account providers (if needed)
-# SOCIALACCOUNT_PROVIDERS = {
-#     'google': {
-#         'SCOPE': [
-#             'profile',
-#             'email',
-#         ],
-#         'AUTH_PARAMS': {
-#             'access_type': 'online',
-#         }
-#     }
-# }
 
 # Email settings
 if DEBUG:
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # Console for debugging
 else:
-    # Configure your production email backend here
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_HOST = 'smtp.gmail.com'
     EMAIL_PORT = 587
     EMAIL_USE_TLS = True
-    EMAIL_HOST_USER = 'Joebrookes51@googlemail.com'
-    EMAIL_HOST_PASSWORD = 'nzeg mplf gmpg uhkt'
+    EMAIL_HOST_USER = 'Joebrookes51@googlemail.com'  # Use environment variable for production
+    EMAIL_HOST_PASSWORD = 'nzeg mplf gmpg uhkt'  # Use environment variable for production
 
+# Logging configuration
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -240,7 +209,7 @@ LOGGING = {
 }
 
 # Security settings
-SECURE_SSL_REDIRECT = False
+SECURE_SSL_REDIRECT = False  # Set to True in production
 SESSION_COOKIE_SECURE = not DEBUG
 CSRF_COOKIE_SECURE = not DEBUG
 SESSION_COOKIE_AGE = 1209600  # 2 weeks, in seconds

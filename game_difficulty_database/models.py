@@ -20,18 +20,37 @@ class Game(models.Model):
     
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True)
-    recommended_difficulty = models.CharField(max_length=50, choices=DIFFICULTY_CHOICES, default='normal') 
+    recommended_difficulty = models.CharField(
+        max_length=50, 
+        choices=DIFFICULTY_CHOICES, 
+        default='normal'
+    ) 
     image = CloudinaryField('image', null=True, blank=True)
-    added_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+    added_by = models.ForeignKey(
+        User, 
+        on_delete=models.SET_NULL, 
+        null=True, 
+        blank=True
+    )
 
     def __str__(self):
         return self.name
 
 class DifficultySettings(models.Model):
-    game = models.ForeignKey(Game, on_delete=models.CASCADE, related_name='difficulty_settings')
+    game = models.ForeignKey(
+        Game, 
+        on_delete=models.CASCADE, 
+        related_name='difficulty_settings'
+    )
     difficulty = models.CharField(max_length=20, choices=Game.DIFFICULTY_CHOICES)
-    player_health = models.IntegerField(default=100, validators=[MinValueValidator(1), MaxValueValidator(1000)])
-    enemy_health = models.IntegerField(default=100, validators=[MinValueValidator(1), MaxValueValidator(1000)])
+    player_health = models.IntegerField(
+        default=100, 
+        validators=[MinValueValidator(1), MaxValueValidator(1000)]
+    )
+    enemy_health = models.IntegerField(
+        default=100, 
+        validators=[MinValueValidator(1), MaxValueValidator(1000)]
+    )
     unlockable = models.BooleanField(default=False)
 
     class Meta:
@@ -43,8 +62,17 @@ class DifficultySettings(models.Model):
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     bio = models.TextField(max_length=500, blank=True)
-    favorite_game = models.ForeignKey(Game, on_delete=models.SET_NULL, null=True, blank=True)
-    preferred_difficulty = models.CharField(max_length=20, choices=Game.DIFFICULTY_CHOICES, default='normal')
+    favorite_game = models.ForeignKey(
+        Game, 
+        on_delete=models.SET_NULL, 
+        null=True, 
+        blank=True
+    )
+    preferred_difficulty = models.CharField(
+        max_length=20, 
+        choices=Game.DIFFICULTY_CHOICES, 
+        default='normal'
+    )
     avatar = CloudinaryField('avatar', null=True, blank=True)
 
     def __str__(self):
@@ -61,14 +89,13 @@ class UserGamePreference(models.Model):
     def __str__(self):
         return f"{self.user.username}'s preference for {self.game.name}"
 
+# Signal to create UserProfile automatically when a User is created
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
         UserProfile.objects.create(user=instance)
 
+# Signal to save UserProfile automatically when a User is saved
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
-    try:
-        instance.userprofile.save()
-    except UserProfile.DoesNotExist:
-        UserProfile.objects.create(user=instance)
+    instance.userprofile.save()

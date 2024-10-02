@@ -6,22 +6,27 @@ from .forms import BlogPostForm
 from django.core.paginator import Paginator
 
 def blog_list(request):
+    """
+    Displays a list of blog posts, paginated to show 10 posts per page.
+    """
     all_posts = BlogPost.objects.all().order_by('-date_published')
     paginator = Paginator(all_posts, 10)  # Show 10 posts per page
     page_number = request.GET.get('page')
     posts = paginator.get_page(page_number)
     return render(request, 'blog/blog_list.html', {'posts': posts})
 
-def blog_list(request):
-    posts = BlogPost.objects.all().order_by('-date_published')
-    return render(request, 'blog/blog_list.html', {'posts': posts})
-
 def blog_detail(request, post_id):
+    """
+    Displays the details of a specific blog post.
+    """
     post = get_object_or_404(BlogPost, id=post_id)
     return render(request, 'blog/blog_detail.html', {'post': post})
 
 @user_passes_test(lambda u: u.is_staff)
 def add_blog_post(request):
+    """
+    Allows staff users to create a new blog post.
+    """
     if request.method == 'POST':
         form = BlogPostForm(request.POST, request.FILES)
         if form.is_valid():
@@ -38,6 +43,9 @@ def add_blog_post(request):
 
 @user_passes_test(lambda u: u.is_staff)
 def edit_blog_post(request, post_id):
+    """
+    Allows staff users to edit an existing blog post.
+    """
     post = get_object_or_404(BlogPost, id=post_id)
     if request.method == 'POST':
         form = BlogPostForm(request.POST, request.FILES, instance=post)
