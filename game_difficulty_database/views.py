@@ -1,18 +1,25 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
+from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
-from .models import Game, DifficultySettings, UserProfile, UserGamePreference
+from .models import Game, UserGamePreference
 from .forms import GameForm, GameDifficultySettingsFormSet, UserProfileForm, UserGamePreferenceForm
-
 
 def game_list(request):
     games = Game.objects.all().order_by('name')
-    introduction_text = "Welcome to the official blog of the Game Difficulty Database, your ultimate resource for finding games that match your skill level. Whether you're a casual player looking for a relaxing experience or a hardcore gamer seeking the next big challenge, our database has something for everyone."
+    query = request.GET.get('q')
+    if query:
+        games = games.filter(
+            Q(name__icontains=query) |
+            Q(description__icontains=query)
+        )
+    introduction_text = "Welcome to the official blog of the Game Difficulty Database..."
     
     return render(request, 'game_difficulty_database/game_list.html', {
         'games': games,
         'introduction_text': introduction_text,
+        'query': query,
     })
 
 def game_detail(request, game_id):
@@ -107,23 +114,23 @@ def set_game_preference(request, game_id):
     else:
         form = UserGamePreferenceForm(instance=preference)
     return render(request, 'game_difficulty_database/set_game_preference.html', {'form': form, 'game': game})   
-    
-def game_list(request):
-    games = Game.objects.all().order_by('name')  # Replace 'name' with the field you want to sort by
-    return render(request, 'game_difficulty_database/game_list.html', {'games': games})
 
-def game_list(request):
-    games = Game.objects.all().order_by('name')
-    query = request.GET.get('q')
-    if query:
-        games = games.filter(
-            Q(name__icontains=query) |
-            Q(description__icontains=query)
-        )
-    introduction_text = "Welcome to the official blog of the Game Difficulty Database..."
-    
-    return render(request, 'game_difficulty_database/game_list.html', {
-        'games': games,
-        'introduction_text': introduction_text,
-        'query': query,
-    })
+def login_view(request):
+    # Implement your login logic here
+    # For example:
+    # if request.method == 'POST':
+    #     form = AuthenticationForm(request, data=request.POST)
+    #     if form.is_valid():
+    #         user = form.get_user()
+    #         login(request, user)
+    #         messages.success(request, "Welcome back! You have successfully logged in!")
+    #         return redirect('home')
+    # else:
+    #     form = AuthenticationForm()
+    # return render(request, 'login.html', {'form': form})
+    pass
+
+def logout_view(request):
+    logout(request)
+    messages.info(request, "You have been logged out. See you next time!")
+    return redirect('home')
