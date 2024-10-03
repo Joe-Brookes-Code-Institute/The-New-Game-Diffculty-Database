@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
 <div class="introduction">
     <h1>Welcome to the Game Difficulty Database</h1>
     <p class="subheading">Our site is designed to help gamers of all types discover games that suit their preferred difficulty level. We aggregate difficulty ratings from various sources and provide detailed information on each game, including user reviews of various difficulty settings</p>
@@ -26,6 +27,6 @@
 </div>
 
 <div class="add-game">
-    <a href="{% url 'add_game' %}" class="btn btn-primary">Add New Game</a>
+    <a href="{% url 'add_game' %}" class="btn btn-primary" style="color: #003366; font-size: 1.2rem;">Add New Game</a>
 </div>
 {% endblock %}

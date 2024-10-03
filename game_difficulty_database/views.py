@@ -149,20 +149,9 @@ def set_game_preference(request, game_id):
 
 
 def login_view(request):
-    # Implement your login logic here
-    # For example:
-    # if request.method == 'POST':
-    #     form = AuthenticationForm(request, data=request.POST)
-    #     if form.is_valid():
-    #         user = form.get_user()
-    #         login(request, user)
-    #         messages.success(request, "Welcome back! You have successfully logged in!")
-    #         return redirect('home')
-    # else:
-    #     form = AuthenticationForm()
-    # return render(request, 'login.html', {'form': form})
-    pass
-
+    login(request)
+    messages.info(request, "You have been logged in. Got anything to update!")
+    return redirect('home')
 
 def logout_view(request):
     logout(request)
