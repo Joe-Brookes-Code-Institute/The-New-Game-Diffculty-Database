@@ -1,5 +1,8 @@
 # The-Game-Diffculty-Database
+image]![image](https://github.com/user-attachments/assets/86d4475c-2c4d-46c3-abca-7d9ae162ca6d)
 
+
+Hi, To get to the project go here. https://game-diffculty-database-d857f5b0452a.herokuapp.com/
 
 
 
@@ -20,9 +23,25 @@ The Game Difficulty Database is a platform designed to provide detailed informat
 ## Why
 
 Many games lack detailed descriptions of their difficulty settings, often providing only vague statements. This database aims to fill that gap by offering comprehensive rundowns and opinions on optimal settings, enhancing players' overall enjoyment and helping them make informed decisions.
-
 - - -
+## How the CRUD/Database works
 
+
+Create
+Casual Users: Can submit information about games, including title, difficulty details, player health, and enemy health.
+Admins: Can create new blog posts with images.
+Read
+Casual Users: Can view submitted game information.
+Admins and Users: Can read blog posts created by admins.
+Update
+Casual Users: Can edit existing entries to update game details.
+Admins: Can edit blog posts.
+Delete
+Casual Users: Can delete their own submissions.
+Admins: Can delete blog posts or any content that violates guidelines.
+Access Control
+Casual Users: Must have an account to participate in CRUD operations.
+Admins: Have additional privileges for managing content.
 
 
 ![image](https://github.com/user-attachments/assets/96dd5766-cf1f-40db-9368-43692b584f13)
@@ -42,6 +61,12 @@ To retrieve information:
 Navigate to the search section.
 Select the categories you're interested in, such as custom difficulty features.
 Browse through the results based on your selected criteria.
+
+## ERD
+
+![image](/workspace/The-New-Game-Diffculty-Database/myapp_erd.png)
+- - -
+
 
 ### Features
 
@@ -159,16 +184,31 @@ Search Functionality: Find games based on various difficulty features and settin
 
 ## Nice Extras & Other Interesting Tools
 
+Django
+PostgreSQL
+Bootstrap
+Heroku
+
 [Chrome Extension Spell Checker](https://chrome.google.com/webstore/detail/webpage-spell-check/mgdhaoimpabdhmacaclbbjddhngchjik) - I love to use this both on my site and to check over my README before submission, as its easy to get spelling errors creeping into your project as you burn the midnight oil towards the end as your deadline is looming.
 
 [Chrome Exension WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) - WAVE is a web accessibility evaluation tool developed by [WebAIM.org](https://wave.webaim.org/). It provides visual feedback about the accessibility of your web content by injecting icons and indicators into your page. No automated tool can tell you if your page is accessible, but WAVE facilitates human evaluation and educates about accessibility issues. All analysis is done entirely within the Chrome browser allowing secure valuation of intranet, local, password protected, and other sensitive web pages. I believe there is also an extension for Firefox.
 
 [Web Disability Simulator](https://chrome.google.com/webstore/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla) - A fantastic chrome extension that allows you to simulate how certain disabilities can affect the users experience of your site. Really useful if you're using colour to represent a result - for example in a quiz.
-
-- - -
-
-
-
-### Acknowledgments
-
-
+Casual User Stories:
+✅ US1: As a casual user, I want to search for a specific game so that I can quickly find its difficulty information.
+✅ US2: As a casual user, I want to browse games by genre so that I can explore difficulty settings for games I might be interested in.
+✅ US3: As a casual user, I want to read detailed descriptions of difficulty settings for a game so that I can choose the right level for my skill.
+✅ US4: As a casual user, I want to register for an account so that I can contribute information to the database.
+US5: As a casual user, I want to rate the accuracy of difficulty descriptions so that other users can benefit from my experience.
+Registered User Stories:
+✅ US6: As a registered user, I want to submit new game entries to the database so that I can contribute to the community.
+✅ US7: As a registered user, I want to edit existing game entries so that I can update or correct information.
+Outside of Scope. US8: As a registered user, I want to save games to a personal list so that I can quickly access them later.
+✅ US9: As a registered user, I want to comment on game entries so that I can share my personal experiences with difficulty settings.
+✅ US10: As a registered user, I want to upload screenshots of difficulty settings so that I can provide visual references for other users.
+Admin User Stories:
+Outside of Scope.  US11: As an admin, I want to review and approve user-submitted entries so that I can maintain the quality of the database.
+✅ US12: As an admin, I want to manage user accounts so that I can moderate the community effectively.
+✅ US13: As an admin, I want to create and edit blog posts so that I can share news and updates about the site.
+Outside of Scope. US14: As an admin, I want to view site statistics so that I can understand user engagement and popular content.
+Outside of Scope. US15: As an admin, I want to feature certain games on the homepage so that I can highlight noteworthy or newly added entries.
