@@ -1,5 +1,5 @@
 # The-Game-Diffculty-Database
-image]![image](https://github.com/user-attachments/assets/86d4475c-2c4d-46c3-abca-7d9ae162ca6d)
+[image](https://github.com/user-attachments/assets/86d4475c-2c4d-46c3-abca-7d9ae162ca6d)
 
 
 Hi, To get to the project go here. https://game-diffculty-database-d857f5b0452a.herokuapp.com/
@@ -179,7 +179,8 @@ Search Functionality: Find games based on various difficulty features and settin
 
 -----------------------------------------------------------
 
-
+MOSCOW
+![Screenshot 2024-10-03 105556](https://github.com/user-attachments/assets/ece84468-8461-4097-b769-68c7d140db41)
 
 
 ## Nice Extras & Other Interesting Tools
@@ -189,11 +190,16 @@ PostgreSQL
 Bootstrap
 Heroku
 
-[Chrome Extension Spell Checker](https://chrome.google.com/webstore/detail/webpage-spell-check/mgdhaoimpabdhmacaclbbjddhngchjik) - I love to use this both on my site and to check over my README before submission, as its easy to get spelling errors creeping into your project as you burn the midnight oil towards the end as your deadline is looming.
 
-[Chrome Exension WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) - WAVE is a web accessibility evaluation tool developed by [WebAIM.org](https://wave.webaim.org/). It provides visual feedback about the accessibility of your web content by injecting icons and indicators into your page. No automated tool can tell you if your page is accessible, but WAVE facilitates human evaluation and educates about accessibility issues. All analysis is done entirely within the Chrome browser allowing secure valuation of intranet, local, password protected, and other sensitive web pages. I believe there is also an extension for Firefox.
+[Chrome Exension WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) 
+![Screenshot 2024-10-03 105556](https://github.com/user-attachments/assets/876d1ecf-7fd5-48ff-8c6e-692f0ccae69e)
 
-[Web Disability Simulator](https://chrome.google.com/webstore/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla) - A fantastic chrome extension that allows you to simulate how certain disabilities can affect the users experience of your site. Really useful if you're using colour to represent a result - for example in a quiz.
+[Dalton](https://chromewebstore.google.com/detail/colorblind-dalton-for-goo/afcafnelafcgjinkaeohkalmfececool?hl=en) - A fantastic chrome extension that allows you to simulate how certain forms of colour blindness can affect the user's experience of your site.
+![Screenshot 2024-10-03 125110](https://github.com/user-attachments/assets/495659fc-b581-4353-adbd-d1a213dd9e01)
+![Screenshot 2024-10-03 125053](https://github.com/user-attachments/assets/e0aea24c-4a3d-48a8-97e0-be184b308ee3)
+![Screenshot 2024-10-03 125036](https://github.com/user-attachments/assets/d66cb153-0a41-422b-8eb8-9fa95fc5df3e)
+
+
 Casual User Stories:
 ✅ US1: As a casual user, I want to search for a specific game so that I can quickly find its difficulty information.
 ✅ US2: As a casual user, I want to browse games by genre so that I can explore difficulty settings for games I might be interested in.
