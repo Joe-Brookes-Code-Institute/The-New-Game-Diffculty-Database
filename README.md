@@ -1,5 +1,5 @@
 # The-Game-Diffculty-Database
-![Creating your first README hero image]![image](https://github.com/user-attachments/assets/86d4475c-2c4d-46c3-abca-7d9ae162ca6d)
+image]![image](https://github.com/user-attachments/assets/86d4475c-2c4d-46c3-abca-7d9ae162ca6d)
 
 
 Hi, To get to the project go here. https://game-diffculty-database-d857f5b0452a.herokuapp.com/
