@@ -73,6 +73,7 @@ Browse through the results based on your selected criteria.
 Submit Game Information: Add details about game difficulty settings.
 Search Functionality: Find games based on various difficulty features and settings.
 
+This is an early mockup of the planned look on a mobile phone.
 
 
 -----------------------------------------------------------
@@ -178,6 +179,16 @@ Search Functionality: Find games based on various difficulty features and settin
 -----------------------------------------------------------
 
 -----------------------------------------------------------
+Here is the current version.
+
+![image](https://github.com/user-attachments/assets/c2c14d0e-73bc-40a9-b040-6ede0ff39142)
+![image](https://github.com/user-attachments/assets/6e10897c-e0d2-4c57-9603-4db1a5ac7fba)
+
+
+
+![image](https://github.com/user-attachments/assets/6e8df882-dc04-4303-929d-72749b3a52de)
+![image](https://github.com/user-attachments/assets/984ee370-207e-4a0d-a50b-51c850cfca87)
+
 
 MOSCOW
 
