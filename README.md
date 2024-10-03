@@ -189,6 +189,9 @@ Here is the current version.
 ![image](https://github.com/user-attachments/assets/6e8df882-dc04-4303-929d-72749b3a52de)
 ![image](https://github.com/user-attachments/assets/984ee370-207e-4a0d-a50b-51c850cfca87)
 
+![image](https://github.com/user-attachments/assets/9148af1f-2d26-4580-bb24-c408367aaf33)
+![image](https://github.com/user-attachments/assets/1a0476b5-c6ad-41fd-bd21-60a26833f75e)
+
 
 MOSCOW
 
