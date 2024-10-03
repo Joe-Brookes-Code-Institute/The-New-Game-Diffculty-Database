@@ -220,3 +220,29 @@ Outside of Scope.  US11: As an admin, I want to review and approve user-submitte
 ✅ US13: As an admin, I want to create and edit blog posts so that I can share news and updates about the site.
 Outside of Scope. US14: As an admin, I want to view site statistics so that I can understand user engagement and popular content.
 Outside of Scope. US15: As an admin, I want to feature certain games on the homepage so that I can highlight noteworthy or newly added entries.
+
+Testing
+The testing strategy ensures the reliability and functionality of the Game Difficulty Database. We employ exploratory testing.
+
+User Interface Testing
+Verify all links and buttons function correctly.
+Test responsiveness across different devices and screen sizes.
+Ensure forms validate input correctly and display appropriate error messages.
+CRUD Functionality Testing
+Create: Test adding new game entries to the database.
+
+Read: Verify that game listings and detail pages display correctly.
+Update: Test editing existing game entries.
+Delete: Ensure game entries can be removed from the database.
+User Authentication Testing
+
+Test user registration process.
+Verify login and logout functionality.
+Ensure proper access control for authenticated and non-authenticated users.
+
+Browser Compatibility
+Tested on the following browsers:
+Google Chrome
+Mozilla Firefox
+Brave
+Microsoft Edge
