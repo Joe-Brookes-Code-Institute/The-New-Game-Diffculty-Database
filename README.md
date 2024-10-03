@@ -180,7 +180,7 @@ Search Functionality: Find games based on various difficulty features and settin
 -----------------------------------------------------------
 
 MOSCOW
-![Screenshot 2024-10-03 105556](https://github.com/user-attachments/assets/ece84468-8461-4097-b769-68c7d140db41)
+
 
 
 ## Nice Extras & Other Interesting Tools
