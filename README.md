@@ -1,5 +1,6 @@
 # The-Game-Diffculty-Database
-[image](https://github.com/user-attachments/assets/86d4475c-2c4d-46c3-abca-7d9ae162ca6d)
+![image](https://github.com/user-attachments/assets/cf100d7e-6fea-4088-9aa8-d86f20668ecd)
+
 
 ## Deployment 
 To get to the project go here. https://game-diffculty-database-d857f5b0452a.herokuapp.com/
@@ -28,19 +29,22 @@ Many games lack detailed descriptions of their difficulty settings, often provid
 
 
 Create
-Casual Users: Can submit information about games, including title, difficulty details, player health, and enemy health.
+Users and Admins: Can submit information about games, including title, difficulty details, player health, and enemy health.
 Admins: Can create new blog posts with images.
+
 Read
-Casual Users: Can view submitted game information.
-Admins and Users: Can read blog posts created by admins.
+Users and Admins: Can view submitted game information.
+Users and Admins: Can read blog posts created by admins.
+
 Update
-Casual Users: Can edit existing entries to update game details.
+Users and Admins: Can edit existing entries to update game details.
 Admins: Can edit blog posts.
+
 Delete
-Casual Users: Can delete their own submissions.
-Admins: Can delete blog posts or any content that violates guidelines.
+Users and Admins: Can delete their own submissions.
+
 Access Control
-Casual Users: Must have an account to participate in CRUD operations.
+Users: Must have an account to participate in CRUD operations.
 Admins: Have additional privileges for managing content.
 
 
