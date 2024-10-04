@@ -248,10 +248,21 @@ Outside of Scope. US14: As an admin, I want to view site statistics so that I ca
 Outside of Scope. US15: As an admin, I want to feature certain games on the homepage so that I can highlight noteworthy or newly added entries.
 
 ### Testing/User Experience Design
-The testing strategy ensures the reliability and functionality of the Game Difficulty Database. We employ exploratory testing.
+# Functional Testing
+Functional testing was conducted to verify that the site works as intended. This involved:
+Checking all links to ensure they lead to the correct pages
+Verifying that the game submission form correctly adds new entries to the database
+Testing the search functionality to confirm it returns accurate results
+Ensuring that user authentication (login, logout, registration) functions properly
+Verifying that game details are displayed correctly on individual game pages
+# Non-Functional Testing
+Non-functional testing was performed to assess the quality of the user experience. This included:
+Evaluating the site's responsiveness across different devices and screen sizes
+Assessing the loading speed of pages and images
+Checking the intuitive nature of the user interface
+Evaluating the visual appeal and consistency of the design
+Testing the site's accessibility features
 
-![image](https://github.com/user-attachments/assets/3f8e42fb-3766-49a7-ae71-1bf593a5809e)
-![image](https://github.com/user-attachments/assets/748ac226-1850-4b54-8a09-c021d33a5a0b)
 
 
 User Interface Testing
@@ -277,17 +288,24 @@ Mozilla Firefox
 Brave
 Microsoft Edge
 
-## Nice Extras & Other Interesting Tools
 
 [Chrome Exension WAVE].
-(https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) 
+(https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) a great way to quickly check for a range of possible issues
+![Screenshot 2024-10-03 115839](https://github.com/user-attachments/assets/4425d9f2-e548-428b-9446-e841ce5e00e0)
+This led to me changing the font on the button near the bottom of the page to be more clear.
 
-
-[Dalton](https://chromewebstore.google.com/detail/colorblind-dalton-for-goo/afcafnelafcgjinkaeohkalmfececool?hl=en) - A fantastic chrome extension that allows you to simulate how certain forms of colour blindness can affect the user's experience of your site.
+[Dalton]
+(https://chromewebstore.google.com/detail/colorblind-dalton-for-goo/afcafnelafcgjinkaeohkalmfececool?hl=en) - A fantastic chrome extension that allows you to simulate how certain forms of colour blindness can affect the user's experience of your site.
 ![Screenshot 2024-10-03 125110](https://github.com/user-attachments/assets/495659fc-b581-4353-adbd-d1a213dd9e01)
 ![Screenshot 2024-10-03 125053](https://github.com/user-attachments/assets/e0aea24c-4a3d-48a8-97e0-be184b308ee3)
 ![Screenshot 2024-10-03 125036](https://github.com/user-attachments/assets/d66cb153-0a41-422b-8eb8-9fa95fc5df3e)
+I found the colours to be fine across a range of settings
 
+[lighthouse].
+(https://developer.chrome.com/docs/lighthouse/overview) A way to check the speed of the page
+![image](https://github.com/user-attachments/assets/3f8e42fb-3766-49a7-ae71-1bf593a5809e)
+![image](https://github.com/user-attachments/assets/748ac226-1850-4b54-8a09-c021d33a5a0b)
+The page mostly ran well but the images had a minor impact
 
 Credits
 WAVE
