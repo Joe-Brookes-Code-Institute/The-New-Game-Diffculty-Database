@@ -63,9 +63,8 @@ Select the categories you're interested in, such as custom difficulty features.
 Browse through the results based on your selected criteria.
 
 ## ERD
-
-![image](/workspace/The-New-Game-Diffculty-Database/myapp_erd.png)
 - - -
+![image](https://github.com/user-attachments/assets/f418df34-7339-4bde-96eb-b8f1c3da4b35)
 
 
 ### Features
@@ -216,7 +215,7 @@ Heroku
 ![Screenshot 2024-10-03 125036](https://github.com/user-attachments/assets/d66cb153-0a41-422b-8eb8-9fa95fc5df3e)
 
 
-Casual User Stories:
+## Casual User Stories:
 
 ✅ US1: As a casual user, I want to search for a specific game so that I can quickly find its difficulty information.
 
@@ -230,7 +229,7 @@ US5: As a casual user, I want to rate the accuracy of difficulty descriptions so
 
 
 
-Registered User Stories:
+## Registered User Stories:
 
 ✅ US6: As a registered user, I want to submit new game entries to the database so that I can contribute to the community.
 
@@ -242,7 +241,7 @@ Outside of Scope. US8: As a registered user, I want to save games to a personal 
 
 ✅ US10: As a registered user, I want to upload screenshots of difficulty settings so that I can provide visual references for other users.
 
-Admin User Stories:
+## Admin User Stories:
 
 Outside of Scope.  US11: As an admin, I want to review and approve user-submitted entries so that I can maintain the quality of the database.
 
@@ -254,8 +253,11 @@ Outside of Scope. US14: As an admin, I want to view site statistics so that I ca
 
 Outside of Scope. US15: As an admin, I want to feature certain games on the homepage so that I can highlight noteworthy or newly added entries.
 
-###Testing 
+## Testing
 The testing strategy ensures the reliability and functionality of the Game Difficulty Database. We employ exploratory testing.
+
+![image](https://github.com/user-attachments/assets/3f8e42fb-3766-49a7-ae71-1bf593a5809e)
+
 
 User Interface Testing
 Verify all links and buttons function correctly.
