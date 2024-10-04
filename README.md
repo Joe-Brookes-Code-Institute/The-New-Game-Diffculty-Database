@@ -215,24 +215,41 @@ Heroku
 
 
 Casual User Stories:
+
 ✅ US1: As a casual user, I want to search for a specific game so that I can quickly find its difficulty information.
+
 ✅ US2: As a casual user, I want to browse games by genre so that I can explore difficulty settings for games I might be interested in.
+
 ✅ US3: As a casual user, I want to read detailed descriptions of difficulty settings for a game so that I can choose the right level for my skill.
+
 ✅ US4: As a casual user, I want to register for an account so that I can contribute information to the database.
+
 US5: As a casual user, I want to rate the accuracy of difficulty descriptions so that other users can benefit from my experience.
 
+
+
 Registered User Stories:
+
 ✅ US6: As a registered user, I want to submit new game entries to the database so that I can contribute to the community.
+
 ✅ US7: As a registered user, I want to edit existing game entries so that I can update or correct information.
+
 Outside of Scope. US8: As a registered user, I want to save games to a personal list so that I can quickly access them later.
+
 ✅ US9: As a registered user, I want to comment on game entries so that I can share my personal experiences with difficulty settings.
+
 ✅ US10: As a registered user, I want to upload screenshots of difficulty settings so that I can provide visual references for other users.
 
 Admin User Stories:
+
 Outside of Scope.  US11: As an admin, I want to review and approve user-submitted entries so that I can maintain the quality of the database.
+
 ✅ US12: As an admin, I want to manage user accounts so that I can moderate the community effectively.
+
 ✅ US13: As an admin, I want to create and edit blog posts so that I can share news and updates about the site.
+
 Outside of Scope. US14: As an admin, I want to view site statistics so that I can understand user engagement and popular content.
+
 Outside of Scope. US15: As an admin, I want to feature certain games on the homepage so that I can highlight noteworthy or newly added entries.
 
 Testing
