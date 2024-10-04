@@ -294,12 +294,22 @@ Test user registration process.
 Verify login and logout functionality.
 Ensure proper access control for authenticated and non-authenticated users.
 
+W3S was used to test the HTML and CSS
+They all seemed to pass validation.
+
+![image](https://github.com/user-attachments/assets/70801238-91cf-470b-bcca-5faf4529aeb5)
+
+
+![image](https://github.com/user-attachments/assets/baf74015-4476-4a89-b053-6dc89866c12d)
+
+
 # Browser Compatibility
 Tested on the following browsers:
 Google Chrome
 Mozilla Firefox
 Brave
 Microsoft Edge
+
 
 
 [Chrome Exension WAVE].
@@ -321,7 +331,8 @@ I found the colours to be fine across a range of settings
 The page mostly ran well but the images had a minor impact
 
 Credits
-WAVE
+Stable Defuse was used for the AI images seen in the readme.
+WAVE for testing the site
 Core Technologies
 Django: The backbone of this project, providing a robust framework for web application development.
 Bootstrap: Powers the responsive design, ensuring a clean and user-friendly interface across various devices.
@@ -342,6 +353,5 @@ django-extensions: Adds additional management commands to Django.
 gunicorn: WSGI HTTP server for running Django in production.
 Pillow: Python Imaging Library, used for image processing.
 python-dotenv: Reads key-value pairs from a .env file and sets them as environment variables.
-rawgpy: Python wrapper for the RAWG Video Games Database API.
 sqlparse: SQL parsing and formatting library.
 whitenoise: Allows serving of static files.
