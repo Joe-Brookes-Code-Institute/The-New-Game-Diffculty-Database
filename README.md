@@ -345,9 +345,9 @@ https://github.com/users/Joe-Brookes-Code-Institute/projects/5/views/1
 
 # People
 Dillon McCaffrey,
-,Amy Richardson
+Amy Richardson,
 John Rearden,
-And
+and
 Ruairidh MacArthur.
 For help with the project.
 
