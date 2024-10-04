@@ -310,7 +310,7 @@ Mozilla Firefox
 Brave
 Microsoft Edge
 
-
+# Tools for testing
 
 [Chrome Exension WAVE].
 (https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) a great way to quickly check for a range of possible issues
@@ -330,9 +330,10 @@ I found the colours to be fine across a range of settings
 ![image](https://github.com/user-attachments/assets/748ac226-1850-4b54-8a09-c021d33a5a0b)
 The page mostly ran well but the images had a minor impact
 
+# Project Board
 https://github.com/users/Joe-Brookes-Code-Institute/projects/5/views/1
 
-Credits
+# Credits
 Stable Defuse was used for the AI images seen in the readme.
 WAVE for testing the site
 Core Technologies
