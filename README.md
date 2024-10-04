@@ -282,3 +282,16 @@ Google Chrome
 Mozilla Firefox
 Brave
 Microsoft Edge
+
+## Credits
+
+Django: This project utilizes the Django web framework, which provides a robust structure for building web applications.
+
+Bootstrap: The responsive design is powered by Bootstrap, allowing for a clean and user-friendly interface across various devices.
+
+PostgreSQL: This project uses PostgreSQL as the database management system, providing reliable data storage and retrieval.
+Libraries and Tools
+
+Psycopg: Used for PostgreSQL database interaction within Django.
+
+Toastify.js: Implemented for user notifications, enhancing user experience with toast messages.
