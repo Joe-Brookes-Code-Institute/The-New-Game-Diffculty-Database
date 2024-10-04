@@ -257,6 +257,7 @@ Outside of Scope. US15: As an admin, I want to feature certain games on the home
 The testing strategy ensures the reliability and functionality of the Game Difficulty Database. We employ exploratory testing.
 
 ![image](https://github.com/user-attachments/assets/3f8e42fb-3766-49a7-ae71-1bf593a5809e)
+![image](https://github.com/user-attachments/assets/748ac226-1850-4b54-8a09-c021d33a5a0b)
 
 
 User Interface Testing
