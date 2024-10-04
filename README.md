@@ -249,23 +249,36 @@ Outside of Scope. US15: As an admin, I want to feature certain games on the home
 
 ### Testing/User Experience Design
 # Functional Testing
+
 Functional testing was conducted to verify that the site works as intended. This involved:
+
 Checking all links to ensure they lead to the correct pages
+
 Verifying that the game submission form correctly adds new entries to the database
+
 Testing the search functionality to confirm it returns accurate results
+
 Ensuring that user authentication (login, logout, registration) functions properly
+
 Verifying that game details are displayed correctly on individual game pages
+
 # Non-Functional Testing
+
 Non-functional testing was performed to assess the quality of the user experience. This included:
+
 Evaluating the site's responsiveness across different devices and screen sizes
+
 Assessing the loading speed of pages and images
+
 Checking the intuitive nature of the user interface
+
 Evaluating the visual appeal and consistency of the design
+
 Testing the site's accessibility features
 
 
 
-User Interface Testing
+# User Interface Testing
 Verify all links and buttons function correctly.
 Test responsiveness across different devices and screen sizes.
 Ensure forms validate input correctly and display appropriate error messages.
@@ -281,7 +294,7 @@ Test user registration process.
 Verify login and logout functionality.
 Ensure proper access control for authenticated and non-authenticated users.
 
-Browser Compatibility
+# Browser Compatibility
 Tested on the following browsers:
 Google Chrome
 Mozilla Firefox
