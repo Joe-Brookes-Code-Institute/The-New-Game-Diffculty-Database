@@ -76,7 +76,7 @@ Browse through the results based on your selected criteria.
 ![Screenshot 2024-10-03 105556](https://github.com/user-attachments/assets/876d1ecf-7fd5-48ff-8c6e-692f0ccae69e)
 
 
-## Early User Experience Design
+## Early User Experience Design/wireframe
 
 Submit Game Information: Add details about game difficulty settings.
 
