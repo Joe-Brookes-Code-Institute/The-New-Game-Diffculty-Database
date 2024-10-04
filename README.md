@@ -353,11 +353,17 @@ For help with the project.
 
 # Software and sites
 
+Code Institute for the early templates.
+
+Heroku for running the site.
+
+Github/Gitpod for hosting the core code.
+
 Stable Defuse was used for the AI images seen in the readme.
 
-WAVE for testing the site
+WAVE for testing the site.
 
-Core Technologies
+Core Technologies.
 
 Django: The backbone of this project, providing a robust framework for web application development.
 
