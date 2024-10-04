@@ -342,36 +342,61 @@ The page mostly ran well but the images had a minor impact
 https://github.com/users/Joe-Brookes-Code-Institute/projects/5/views/1
 
 # Credits
-Dillon McCaffrey
-Amy Richardson
-John Rearden
+
+# People
+Dillon McCaffrey,
+,Amy Richardson
+John Rearden,
 And
-Ruairidh MacArthur
+Ruairidh MacArthur.
 For help with the project.
 
+# Software and sites
+
 Stable Defuse was used for the AI images seen in the readme.
+
 WAVE for testing the site
+
 Core Technologies
+
 Django: The backbone of this project, providing a robust framework for web application development.
+
 Bootstrap: Powers the responsive design, ensuring a clean and user-friendly interface across various devices.
+
 PostgreSQL: Serves as the database management system, offering reliable data storage and retrieval.
+
 Key Libraries and Tools
+
 Psycopg: Facilitates PostgreSQL database interaction within Django.
+
 Toastify.js: Enhances user experience with toast notifications.
+
 Lighthouse: Employed for performance auditing, optimizing site speed and accessibility.
+
 Dalton: Utilized for color blindness simulation, improving accessibility for users with color vision deficiencies.
-AI Assistance
+
 Perplexity AI: Provided valuable assistance in generating code snippets, troubleshooting, and offering suggestions throughout the development process.
+
 Additional Libraries and Dependencies
+
 asgiref: ASGI framework for Django.
+
 cloudinary and dj3-cloudinary-storage: Used for cloud-based image and file storage.
+
 dj-database-url: Allows use of database URLs for configuration.
+
 django-allauth: Provides authentication, registration, and account management.
+
 django-extensions: Adds additional management commands to Django.
+
 gunicorn: WSGI HTTP server for running Django in production.
+
 Pillow: Python Imaging Library, used for image processing.
+
 python-dotenv: Reads key-value pairs from a .env file and sets them as environment variables.
+
 sqlparse: SQL parsing and formatting library.
+
 whitenoise: Allows serving of static files.
 
-Project build by Joe Brookes.
+# Project built by Joe Brookes.
