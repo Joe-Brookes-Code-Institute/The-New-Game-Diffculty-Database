@@ -67,7 +67,7 @@ Browse through the results based on your selected criteria.
 ![image](https://github.com/user-attachments/assets/f418df34-7339-4bde-96eb-b8f1c3da4b35)
 
 
-### Features
+### Features/
 
 Submit Game Information: Add details about game difficulty settings.
 
@@ -198,21 +198,6 @@ MOSCOW
 
 
 
-## Nice Extras & Other Interesting Tools
-
-Django
-PostgreSQL
-Bootstrap
-Heroku
-
-
-[Chrome Exension WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) 
-![Screenshot 2024-10-03 105556](https://github.com/user-attachments/assets/876d1ecf-7fd5-48ff-8c6e-692f0ccae69e)
-
-[Dalton](https://chromewebstore.google.com/detail/colorblind-dalton-for-goo/afcafnelafcgjinkaeohkalmfececool?hl=en) - A fantastic chrome extension that allows you to simulate how certain forms of colour blindness can affect the user's experience of your site.
-![Screenshot 2024-10-03 125110](https://github.com/user-attachments/assets/495659fc-b581-4353-adbd-d1a213dd9e01)
-![Screenshot 2024-10-03 125053](https://github.com/user-attachments/assets/e0aea24c-4a3d-48a8-97e0-be184b308ee3)
-![Screenshot 2024-10-03 125036](https://github.com/user-attachments/assets/d66cb153-0a41-422b-8eb8-9fa95fc5df3e)
 
 
 ## Casual User Stories:
@@ -253,7 +238,7 @@ Outside of Scope. US14: As an admin, I want to view site statistics so that I ca
 
 Outside of Scope. US15: As an admin, I want to feature certain games on the homepage so that I can highlight noteworthy or newly added entries.
 
-## Testing
+## Testing/User Experience Design
 The testing strategy ensures the reliability and functionality of the Game Difficulty Database. We employ exploratory testing.
 
 ![image](https://github.com/user-attachments/assets/3f8e42fb-3766-49a7-ae71-1bf593a5809e)
@@ -283,15 +268,39 @@ Mozilla Firefox
 Brave
 Microsoft Edge
 
-## Credits
+## Nice Extras & Other Interesting Tools
 
-Django: This project utilizes the Django web framework, which provides a robust structure for building web applications.
+[Chrome Exension WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) 
+![Screenshot 2024-10-03 105556](https://github.com/user-attachments/assets/876d1ecf-7fd5-48ff-8c6e-692f0ccae69e)
 
-Bootstrap: The responsive design is powered by Bootstrap, allowing for a clean and user-friendly interface across various devices.
+[Dalton](https://chromewebstore.google.com/detail/colorblind-dalton-for-goo/afcafnelafcgjinkaeohkalmfececool?hl=en) - A fantastic chrome extension that allows you to simulate how certain forms of colour blindness can affect the user's experience of your site.
+![Screenshot 2024-10-03 125110](https://github.com/user-attachments/assets/495659fc-b581-4353-adbd-d1a213dd9e01)
+![Screenshot 2024-10-03 125053](https://github.com/user-attachments/assets/e0aea24c-4a3d-48a8-97e0-be184b308ee3)
+![Screenshot 2024-10-03 125036](https://github.com/user-attachments/assets/d66cb153-0a41-422b-8eb8-9fa95fc5df3e)
 
-PostgreSQL: This project uses PostgreSQL as the database management system, providing reliable data storage and retrieval.
-Libraries and Tools
 
-Psycopg: Used for PostgreSQL database interaction within Django.
-
-Toastify.js: Implemented for user notifications, enhancing user experience with toast messages.
+Credits
+WAVE
+Core Technologies
+Django: The backbone of this project, providing a robust framework for web application development.
+Bootstrap: Powers the responsive design, ensuring a clean and user-friendly interface across various devices.
+PostgreSQL: Serves as the database management system, offering reliable data storage and retrieval.
+Key Libraries and Tools
+Psycopg: Facilitates PostgreSQL database interaction within Django.
+Toastify.js: Enhances user experience with toast notifications.
+Lighthouse: Employed for performance auditing, optimizing site speed and accessibility.
+Dalton: Utilized for color blindness simulation, improving accessibility for users with color vision deficiencies.
+AI Assistance
+Perplexity AI: Provided valuable assistance in generating code snippets, troubleshooting, and offering suggestions throughout the development process.
+Additional Libraries and Dependencies
+asgiref: ASGI framework for Django.
+cloudinary and dj3-cloudinary-storage: Used for cloud-based image and file storage.
+dj-database-url: Allows use of database URLs for configuration.
+django-allauth: Provides authentication, registration, and account management.
+django-extensions: Adds additional management commands to Django.
+gunicorn: WSGI HTTP server for running Django in production.
+Pillow: Python Imaging Library, used for image processing.
+python-dotenv: Reads key-value pairs from a .env file and sets them as environment variables.
+rawgpy: Python wrapper for the RAWG Video Games Database API.
+sqlparse: SQL parsing and formatting library.
+whitenoise: Allows serving of static files.
