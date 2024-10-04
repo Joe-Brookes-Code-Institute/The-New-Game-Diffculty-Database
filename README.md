@@ -342,6 +342,13 @@ The page mostly ran well but the images had a minor impact
 https://github.com/users/Joe-Brookes-Code-Institute/projects/5/views/1
 
 # Credits
+Dillon McCaffrey
+Amy Richardson
+John Rearden
+And
+Ruairidh MacArthur
+For help with the project.
+
 Stable Defuse was used for the AI images seen in the readme.
 WAVE for testing the site
 Core Technologies
@@ -366,3 +373,5 @@ Pillow: Python Imaging Library, used for image processing.
 python-dotenv: Reads key-value pairs from a .env file and sets them as environment variables.
 sqlparse: SQL parsing and formatting library.
 whitenoise: Allows serving of static files.
+
+Project build by Joe Brookes.
