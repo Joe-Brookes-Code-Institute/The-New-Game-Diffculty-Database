@@ -312,6 +312,14 @@ Microsoft Edge
 
 # Tools for testing
 
+W3S Validators
+https://jigsaw.w3.org/css-validator/
+https://validator.w3.org/#validate_by_uri
+Used to check the HTML and CSS
+![image](https://github.com/user-attachments/assets/fdc31ded-06ce-4b88-a5a9-9a5b38f5a601)
+![image](https://github.com/user-attachments/assets/54f12722-abfc-4f09-9e57-f9d433ea3a7a)
+
+
 [Chrome Exension WAVE].
 (https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) a great way to quickly check for a range of possible issues
 ![Screenshot 2024-10-03 115839](https://github.com/user-attachments/assets/4425d9f2-e548-428b-9446-e841ce5e00e0)
