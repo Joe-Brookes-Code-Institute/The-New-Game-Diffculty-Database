@@ -67,8 +67,8 @@ Browse through the results based on your selected criteria.
 ![image](https://github.com/user-attachments/assets/f418df34-7339-4bde-96eb-b8f1c3da4b35)
 
 
-### Features/
-MOSCOW
+### Features
+## MOSCOW
 ![Screenshot 2024-10-03 105556](https://github.com/user-attachments/assets/876d1ecf-7fd5-48ff-8c6e-692f0ccae69e)
 
 Submit Game Information: Add details about game difficulty settings.
@@ -78,7 +78,7 @@ This feature only ended up going as far as basic name searching.
 
 This is an early mockup of the planned look on a mobile phone.
 
-### User Experience Design
+## Early User Experience Design
 -----------------------------------------------------------
 | Navigation Bar: Home | Games | Submit | Login/Register  |
 -----------------------------------------------------------
@@ -182,6 +182,7 @@ This is an early mockup of the planned look on a mobile phone.
 -----------------------------------------------------------
 
 -----------------------------------------------------------
+## Current User Experience Design
 Here is the current version.
 
 ![image](https://github.com/user-attachments/assets/c2c14d0e-73bc-40a9-b040-6ede0ff39142)
@@ -240,7 +241,7 @@ Outside of Scope. US14: As an admin, I want to view site statistics so that I ca
 
 Outside of Scope. US15: As an admin, I want to feature certain games on the homepage so that I can highlight noteworthy or newly added entries.
 
-## Testing/User Experience Design
+### Testing/User Experience Design
 The testing strategy ensures the reliability and functionality of the Game Difficulty Database. We employ exploratory testing.
 
 ![image](https://github.com/user-attachments/assets/3f8e42fb-3766-49a7-ae71-1bf593a5809e)
