@@ -1,8 +1,8 @@
 # The-Game-Diffculty-Database
 [image](https://github.com/user-attachments/assets/86d4475c-2c4d-46c3-abca-7d9ae162ca6d)
 
-
-Hi, To get to the project go here. https://game-diffculty-database-d857f5b0452a.herokuapp.com/
+## Deployment 
+To get to the project go here. https://game-diffculty-database-d857f5b0452a.herokuapp.com/
 
 
 
@@ -71,11 +71,13 @@ Browse through the results based on your selected criteria.
 ### Features
 
 Submit Game Information: Add details about game difficulty settings.
+
 Search Functionality: Find games based on various difficulty features and settings.
+This feature only ended up going as far as basic name searching.
 
 This is an early mockup of the planned look on a mobile phone.
 
-
+### User Experience Design
 -----------------------------------------------------------
 | Navigation Bar: Home | Games | Submit | Login/Register  |
 -----------------------------------------------------------
@@ -252,7 +254,7 @@ Outside of Scope. US14: As an admin, I want to view site statistics so that I ca
 
 Outside of Scope. US15: As an admin, I want to feature certain games on the homepage so that I can highlight noteworthy or newly added entries.
 
-Testing
+###Testing 
 The testing strategy ensures the reliability and functionality of the Game Difficulty Database. We employ exploratory testing.
 
 User Interface Testing
