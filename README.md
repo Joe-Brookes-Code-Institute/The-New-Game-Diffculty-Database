@@ -68,6 +68,8 @@ Browse through the results based on your selected criteria.
 
 
 ### Features/
+MOSCOW
+(https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) 
 
 Submit Game Information: Add details about game difficulty settings.
 
@@ -194,7 +196,7 @@ Here is the current version.
 ![image](https://github.com/user-attachments/assets/1a0476b5-c6ad-41fd-bd21-60a26833f75e)
 
 
-MOSCOW
+
 
 
 
@@ -270,7 +272,7 @@ Microsoft Edge
 
 ## Nice Extras & Other Interesting Tools
 
-[Chrome Exension WAVE](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) 
+[Chrome Exension WAVE].
 ![Screenshot 2024-10-03 105556](https://github.com/user-attachments/assets/876d1ecf-7fd5-48ff-8c6e-692f0ccae69e)
 
 [Dalton](https://chromewebstore.google.com/detail/colorblind-dalton-for-goo/afcafnelafcgjinkaeohkalmfececool?hl=en) - A fantastic chrome extension that allows you to simulate how certain forms of colour blindness can affect the user's experience of your site.
