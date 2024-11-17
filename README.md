@@ -99,7 +99,7 @@ If you'd like to deploy this project yourself, you can fork and clone the reposi
    git clone <repository_url>
 8. Type the following command, replacing `<repository_url>` with the URL you copied:  
    ```bash
-  git clone https://github.com/Joe-Brookes-Code-Institute/The-New-Game-Diffculty-Database.git 
+   git clone https://github.com/Joe-Brookes-Code-Institute/The-New-Game-Diffculty-Database.git   
 9. Press Enter to create a local repository clone on your machine.     
 
 
