@@ -28,10 +28,6 @@
 13. [Tools for Testing](#tools-for-testing)  
 14. [Project Board](#project-board)  
 15. [Credits](#credits)  
-    - [People](#people)  
-    - [Software and Sites](#software-and-sites)  
-    - [Core Technologies](#core-technologies)  
-    - [Key Libraries and Tools](#key-libraries-and-tools)  
 
 
 ## Deployment 
@@ -52,7 +48,10 @@ The Heroku app address (e.g., your-app-name.herokuapp.com)
 
 The host name assigned to your Django project (if applicable).
 
+A Cloudinary account for media storage (optional, if not using Cloudinary).
+
 Environment Variables: Secret information such as DATABASE_URL, CLOUDINARY_URL, and SECRET_KEY should be included in the .env file to keep them private.
+
 
 
 # Deploying with Heroku
@@ -75,19 +74,31 @@ To deploy the project on Heroku:
 
 8 Return to the Deploy tab and click Deploy Branch to launch the Game Difficulty Database.
 
-# Forking and Cloning the Repository
+## Forking and Cloning the Repository
 
-You can fork this repository to try it in your own deployment:
+If you'd like to deploy this project yourself, you can fork and clone the repository by following these steps:
 
-1 In the GitHub repository, click the Fork button to clone this repository to your own GitHub account.
+### Forking
 
-2 If you wish to open it in Gitpod, the Code Institute IDE must be available to your account.
+1. Navigate to the GitHub repository.  
+2. Click the **Fork** button located in the top-right corner of the page.  
+   - This will create a copy of the repository in your own GitHub account.
 
-3 To clone the repository locally, use the following command in Git Bash (or any terminal):
+### Cloning
 
-4 git clone https://github.com/Joe-Brookes-Code-Institute/The-New-Game-Difficulty-Database
-
-5 Press Enter to create the local clone.
+1. Go to your forked repository on GitHub.  
+2. Click the **Code** button near the top of the page.  
+3. Choose your preferred method for cloning the repository:  
+   - **HTTPS**
+   - **SSH**
+   - **GitHub CLI**  
+4. Click the copy button to copy the repository URL to your clipboard.  
+5. Open **Git Bash** or your preferred terminal.  
+6. Type the following command, replacing `<repository_url>` with the URL you copied:  
+   ```bash
+   git clone <repository_url>
+For example: git clone https://github.com/Joe-Brookes-Code-Institute/The-New-Game-Diffculty-Database.git
+7. Press Enter to create a local clone of the repository on your machine.
 
 
 ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=flat=markdown&logoColor=white) ![GitHub contributors](https://img.shields.io/github/contributors/kera-cudmore/readme-examples?style=flat) ![GitHub last commit](https://img.shields.io/github/last-commit/kera-cudmore/readme-examples?style=flat)  ![GitHub Repo stars](https://img.shields.io/github/stars/kera-cudmore/readme-examples?style=social)  ![GitHub forks](https://img.shields.io/github/forks/kera-cudmore/readme-examples?style=social)
