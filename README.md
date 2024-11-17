@@ -7,30 +7,55 @@ To get to the project go here. https://game-diffculty-database-d857f5b0452a.hero
 
 # Requirements
 Before deploying, ensure the following:
+
 requirements.txt: This file must be up-to-date to ensure compatibility with the deployed environment.
+
 Procfile: A Procfile must be placed in the root directory of the project, which includes the correct Gunicorn setup to run the Django app.
+
 ALLOWED_HOSTS: In settings.py, the ALLOWED_HOSTS list should include:
+
 Your local address (e.g., localhost or 127.0.0.1)
+
 The Heroku app address (e.g., your-app-name.herokuapp.com)
+
 The host name assigned to your Django project (if applicable).
+
 Environment Variables: Secret information such as DATABASE_URL, CLOUDINARY_URL, and SECRET_KEY should be included in the .env file to keep them private.
+
+
 # Deploying with Heroku
+
 To deploy the project on Heroku:
-Log in to Heroku and click Create New App.
-Name your app and choose the correct region.
-Click the Deploy tab and choose GitHub.
-Find your repository and connect it.
-Choose either manual or automatic deployment.
-Go to the Settings tab, reveal Config Vars, and input the necessary environment variables.
-Under Buildpacks, add heroku/python.
-Return to the Deploy tab and click Deploy Branch to launch the Game Difficulty Database.
+
+1 Log in to Heroku and click Create New App.
+
+2 Name your app and choose the correct region.
+
+3 Click the Deploy tab and choose GitHub.
+
+4 Find your repository and connect it.
+
+5 Choose either manual or automatic deployment.
+
+6 Go to the Settings tab, reveal Config Vars, and input the necessary environment variables.
+
+7 Under Buildpacks, add heroku/python.
+
+8 Return to the Deploy tab and click Deploy Branch to launch the Game Difficulty Database.
+
 # Forking and Cloning the Repository
-You can fork this repository to try your own deployment:
-In the GitHub repository, click the Fork button to clone this repository to your own GitHub account.
-If you wish to open it in Gitpod, the Code Institute IDE must be available to your account.
-To clone the repository locally, use the following command in Git Bash (or any terminal):
-git clone https://github.com/Joe-Brookes-Code-Institute/The-New-Game-Difficulty-Database
-Press Enter to create the local clone.
+
+You can fork this repository to try it in your own deployment:
+
+1 In the GitHub repository, click the Fork button to clone this repository to your own GitHub account.
+
+2 If you wish to open it in Gitpod, the Code Institute IDE must be available to your account.
+
+3 To clone the repository locally, use the following command in Git Bash (or any terminal):
+
+4 git clone https://github.com/Joe-Brookes-Code-Institute/The-New-Game-Difficulty-Database
+
+5 Press Enter to create the local clone.
 
 
 ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=flat=markdown&logoColor=white) ![GitHub contributors](https://img.shields.io/github/contributors/kera-cudmore/readme-examples?style=flat) ![GitHub last commit](https://img.shields.io/github/last-commit/kera-cudmore/readme-examples?style=flat)  ![GitHub Repo stars](https://img.shields.io/github/stars/kera-cudmore/readme-examples?style=social)  ![GitHub forks](https://img.shields.io/github/forks/kera-cudmore/readme-examples?style=social)
