@@ -1,6 +1,38 @@
 # The-Game-Diffculty-Database
 ![image](https://github.com/user-attachments/assets/cf100d7e-6fea-4088-9aa8-d86f20668ecd)
 
+## Table of Contents
+
+1. [Deployment](#deployment)  
+2. [Requirements](#requirements)  
+3. [Deploying with Heroku](#deploying-with-heroku)  
+4. [Forking and Cloning the Repository](#forking-and-cloning-the-repository)  
+5. [What's is The-Game-Diffculty-Database](#whats-is-the-game-diffculty-database)  
+6. [Why](#why)  
+7. [How the CRUD/Database works](#how-the-cruddatabase-works)  
+8. [How to use the Database](#how-to-use-the-database)  
+9. [ERD](#erd)  
+10. [Features](#features)  
+    - [MOSCOW](#moscow)  
+    - [Early User Experience Design/wireframe](#early-user-experience-designwireframe)  
+    - [Current User Experience Design](#current-user-experience-design)  
+11. [User Stories](#user-stories)  
+    - [Casual User Stories](#casual-user-stories)  
+    - [Registered User Stories](#registered-user-stories)  
+    - [Admin User Stories](#admin-user-stories)  
+12. [Testing and User Experience Design](#testing-and-user-experience-design)  
+    - [Functional Testing](#functional-testing)  
+    - [Non-Functional Testing](#non-functional-testing)  
+    - [User Interface Testing](#user-interface-testing)  
+    - [Browser Compatibility](#browser-compatibility)  
+13. [Tools for Testing](#tools-for-testing)  
+14. [Project Board](#project-board)  
+15. [Credits](#credits)  
+    - [People](#people)  
+    - [Software and Sites](#software-and-sites)  
+    - [Core Technologies](#core-technologies)  
+    - [Key Libraries and Tools](#key-libraries-and-tools)  
+
 
 ## Deployment 
 To get to the project go here. https://game-diffculty-database-d857f5b0452a.herokuapp.com/
