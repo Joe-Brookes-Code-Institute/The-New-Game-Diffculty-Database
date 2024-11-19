@@ -23,10 +23,10 @@
     - [Browser Compatibility](#browser-compatibility)  
 9. [Tools for Testing](#tools-for-testing)  
 10. [Project Board](#project-board)
-11.[Deployment](#deployment)
-    [Requirements](#requirements)   
-    [Deploying with Heroku](#deploying-with-heroku)  
-    [Forking and Cloning the Repository](#forking-and-cloning-the-repository)  
+11.[Deployment](#deployment)  
+    - [Requirements](#requirements)  
+    - [Deploying with Heroku](#deploying-with-heroku) 
+    - [Forking and Cloning the Repository](#forking-and-cloning-the-repository)   
 12. [Credits](#credits)
 
 
