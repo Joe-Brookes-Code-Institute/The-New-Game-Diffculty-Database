@@ -3,107 +3,32 @@
 
 ## Table of Contents
 
-1. [Deployment](#deployment)  
-2. [Requirements](#requirements)  
-3. [Deploying with Heroku](#deploying-with-heroku)  
-4. [Forking and Cloning the Repository](#forking-and-cloning-the-repository)  
-5. [What's is The-Game-Diffculty-Database](#whats-is-the-game-diffculty-database)  
-6. [Why](#why)  
-7. [How the CRUD/Database works](#how-the-cruddatabase-works)  
-8. [How to use the Database](#how-to-use-the-database)  
-9. [ERD](#erd)  
-10. [Features](#features)  
+1. [What's is The-Game-Diffculty-Database](#whats-is-the-game-diffculty-database)  
+2. [Why](#why)  
+3. [How the CRUD/Database works](#how-the-cruddatabase-works)  
+4. [How to use the Database](#how-to-use-the-database)  
+5. [ERD](#erd)  
+6. [Features](#features)  
     - [MOSCOW](#moscow)  
     - [Early User Experience Design/wireframe](#early-user-experience-designwireframe)  
     - [Current User Experience Design](#current-user-experience-design)  
-11. [User Stories](#user-stories)  
+7. [User Stories](#user-stories)  
     - [Casual User Stories](#casual-user-stories)  
     - [Registered User Stories](#registered-user-stories)  
     - [Admin User Stories](#admin-user-stories)  
-12. [Testing and User Experience Design](#testing-and-user-experience-design)  
+8. [Testing and User Experience Design](#testing-and-user-experience-design)  
     - [Functional Testing](#functional-testing)  
     - [Non-Functional Testing](#non-functional-testing)  
     - [User Interface Testing](#user-interface-testing)  
     - [Browser Compatibility](#browser-compatibility)  
-13. [Tools for Testing](#tools-for-testing)  
-14. [Project Board](#project-board)  
-15. [Credits](#credits)  
+9. [Tools for Testing](#tools-for-testing)  
+10. [Project Board](#project-board)
+11.[Deployment](#deployment)
+    [Requirements](#requirements)   
+    [Deploying with Heroku](#deploying-with-heroku)  
+    [Forking and Cloning the Repository](#forking-and-cloning-the-repository)  
+12. [Credits](#credits)
 
-
-## Deployment 
-To get to the project go here. https://game-diffculty-database-d857f5b0452a.herokuapp.com/
-
-# Requirements
-Before deploying, ensure the following:
-
-requirements.txt: This file must be up-to-date to ensure compatibility with the deployed environment.
-
-Procfile: A Procfile must be placed in the root directory of the project, which includes the correct Gunicorn setup to run the Django app.
-
-ALLOWED_HOSTS: In settings.py, the ALLOWED_HOSTS list should include:
-
-Your local address (e.g., localhost or 127.0.0.1)
-
-The Heroku app address (e.g., your-app-name.herokuapp.com)
-
-The host name assigned to your Django project (if applicable).
-
-A Cloudinary account for media storage (optional, if not using Cloudinary).
-
-Environment Variables: Secret information such as DATABASE_URL, CLOUDINARY_URL, and SECRET_KEY should be included in the .env file to keep them private.
-
-
-
-# Deploying with Heroku
-
-To deploy the project on Heroku:
-
-1 Log in to Heroku and click Create New App.
-
-2 Name your app and choose the correct region.
-
-3 Click the Deploy tab and choose GitHub.
-
-4 Find your repository and connect it.
-
-5 Choose either manual or automatic deployment.
-
-6 Go to the Settings tab, reveal Config Vars, and input the necessary environment variables.
-
-7 Under Buildpacks, add heroku/python.
-
-8 Return to the Deploy tab and click Deploy Branch to launch the Game Difficulty Database.
-
-## Forking and Cloning the Repository
-
-If you'd like to deploy this project yourself, you can fork and clone the repository by following these steps:
-
-### Forking
-
-1. Navigate to the GitHub repository.  
-2. Click the **Fork** button located in the top-right corner of the page.  
-   - This will create a copy of the repository in your own GitHub account.
-
-### Cloning
-
-1. Go to your forked repository on GitHub.  
-2. Click the **Code** button near the top of the page.  
-3. Choose your preferred method for cloning the repository:  
-   - **HTTPS**
-   - **SSH**
-   - **GitHub CLI**  
-4. Click the copy button to copy the repository URL to your clipboard.  
-5. Open **Git Bash** or your preferred terminal.  
-6. Type the following command, replacing `<repository_url>` with the URL you copied:  
-   ```bash
-   git clone <repository_url>
-8. for example:  
-   ```bash
-   git clone https://github.com/Joe-Brookes-Code-Institute/The-New-Game-Diffculty-Database.git   
-9. Press Enter to create a local repository clone on your machine.     
-
-
-![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=flat=markdown&logoColor=white) ![GitHub contributors](https://img.shields.io/github/contributors/kera-cudmore/readme-examples?style=flat) ![GitHub last commit](https://img.shields.io/github/last-commit/kera-cudmore/readme-examples?style=flat)  ![GitHub Repo stars](https://img.shields.io/github/stars/kera-cudmore/readme-examples?style=social)  ![GitHub forks](https://img.shields.io/github/forks/kera-cudmore/readme-examples?style=social)
 
 
 
@@ -435,6 +360,84 @@ The page mostly ran well but the images had a minor impact
 
 # Project Board
 https://github.com/users/Joe-Brookes-Code-Institute/projects/5/views/1
+
+## Deployment 
+To get to the project go here. https://game-diffculty-database-d857f5b0452a.herokuapp.com/
+
+# Requirements
+Before deploying, ensure the following:
+
+requirements.txt: This file must be up-to-date to ensure compatibility with the deployed environment.
+
+Procfile: A Procfile must be placed in the root directory of the project, which includes the correct Gunicorn setup to run the Django app.
+
+ALLOWED_HOSTS: In settings.py, the ALLOWED_HOSTS list should include:
+
+Your local address (e.g., localhost or 127.0.0.1)
+
+The Heroku app address (e.g., your-app-name.herokuapp.com)
+
+The host name assigned to your Django project (if applicable).
+
+A Cloudinary account for media storage (optional, if not using Cloudinary).
+
+Environment Variables: Secret information such as DATABASE_URL, CLOUDINARY_URL, and SECRET_KEY should be included in the .env file to keep them private.
+
+
+
+# Deploying with Heroku
+
+To deploy the project on Heroku:
+
+1 Log in to Heroku and click Create New App.
+
+2 Name your app and choose the correct region.
+
+3 Click the Deploy tab and choose GitHub.
+
+4 Find your repository and connect it.
+
+5 Choose either manual or automatic deployment.
+
+6 Go to the Settings tab, reveal Config Vars, and input the necessary environment variables.
+
+7 Under Buildpacks, add heroku/python.
+
+8 Return to the Deploy tab and click Deploy Branch to launch the Game Difficulty Database.
+
+## Forking and Cloning the Repository
+
+If you'd like to deploy this project yourself, you can fork and clone the repository by following these steps:
+
+### Forking
+
+1. Navigate to the GitHub repository.  
+2. Click the **Fork** button located in the top-right corner of the page.  
+   - This will create a copy of the repository in your own GitHub account.
+
+### Cloning
+
+1. Go to your forked repository on GitHub.  
+2. Click the **Code** button near the top of the page.  
+3. Choose your preferred method for cloning the repository:  
+   - **HTTPS**
+   - **SSH**
+   - **GitHub CLI**  
+4. Click the copy button to copy the repository URL to your clipboard.  
+5. Open **Git Bash** or your preferred terminal.  
+6. Type the following command, replacing `<repository_url>` with the URL you copied:  
+   ```bash
+   git clone <repository_url>
+8. for example:  
+   ```bash
+   git clone https://github.com/Joe-Brookes-Code-Institute/The-New-Game-Diffculty-Database.git   
+9. Press Enter to create a local repository clone on your machine.     
+
+
+![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=flat=markdown&logoColor=white) ![GitHub contributors](https://img.shields.io/github/contributors/kera-cudmore/readme-examples?style=flat) ![GitHub last commit](https://img.shields.io/github/last-commit/kera-cudmore/readme-examples?style=flat)  ![GitHub Repo stars](https://img.shields.io/github/stars/kera-cudmore/readme-examples?style=social)  ![GitHub forks](https://img.shields.io/github/forks/kera-cudmore/readme-examples?style=social)
+
+
+
 
 # Credits
 
